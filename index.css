@@ -1,7 +1,27 @@
-body {
-  padding-top: 50px;
+html, body, .container-fluid {
+    height: 100%;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+
+#Personal {
+    background-color: grey;
+    height: 25%;
+    -webkit-transition: height 0.5s;
+}
+
+#Git {
+    background-color: white;
+    height: 25%;
+    -webkit-transition: height 0.5s;
+}
+
+#Blog {
+    background-color: red;
+    height: 25%;
+    -webkit-transition: height 0.5s;
+}
+
+#Projects {
+    background-color: yellow;
+    height: 25%;
+    -webkit-transition: height 0.5s;
 }
