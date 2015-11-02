@@ -1,27 +1,65 @@
 html, body, .container-fluid {
+    background-color: black;
     height: 100%;
+    overflow: hidden;
+}
+
+.row {
+    color: white;
+    max-height: 76%;
+    -webkit-transition: height 0.5s;
+}
+
+.row img {
+    max-height: 50%;
+    max-width: 50%;
+    border-radius: 25%;
+    margin: auto;
 }
 
 #Personal {
-    background-color: grey;
+    background-image: url("../media/personalbg.jpg");
+    background-size: cover;
+    background-position: 0% 24%;
     height: 25%;
-    -webkit-transition: height 0.5s;
 }
 
 #Git {
-    background-color: white;
+    background-image: url("../media/gitbg.png");
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
     height: 25%;
-    -webkit-transition: height 0.5s;
 }
 
 #Blog {
-    background-color: red;
+    background-image: url("../media/blogbg.jpg");
+    background-size: cover;
+    background-position: 0% 30%;
     height: 25%;
-    -webkit-transition: height 0.5s;
 }
 
 #Projects {
-    background-color: yellow;
+    background-color: black;
     height: 25%;
-    -webkit-transition: height 0.5s;
+}
+
+.lead {
+    opacity: 0;
+}
+
+.title {
+    text-align: left;
+}
+
+.title2 {
+    text-align: center;
+}
+
+.detail {
+    padding-top: 25%;
+}
+
+#Git .title2 {
+    color: black;
+    text-align: center;
 }
