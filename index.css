@@ -38,6 +38,7 @@ html, body, .container-fluid {
 #Git {
     background-image: url("./media/gitbg.png");
     background-repeat: no-repeat;
+    background-size: 1600;
     background-position: 0% -45%;
     height: 25%;
 }
@@ -77,7 +78,7 @@ html, body, .container-fluid {
         background-size: 2000px auto;
     }
     #Git { /*Fix image in future */
-        background-size: 1500px auto;
+        background-size: 1350px auto;
         background-position: 0% 0%;
     }
 }

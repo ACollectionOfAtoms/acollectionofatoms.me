@@ -84,9 +84,10 @@ cssReset = function() {
 
 gitCatReset = function() {
     $("#Git").animate({backgroundColor: "black"});
-    $("#Git").animate({"background-position": "0% -100%"}, 0, function() {
-        $("#Git").css({"background-image": ""})
+    // Below only works once! Need to do math...
+    $("#Git").animate({"background-position": "0% -45%"}, 0, function() {
+        $("#Git").css({"background-image": ""});
         $("#Git").animate({"background-position-x": "0%",
-                           "background-position-y": "-45%"}, 1000, "linear");
+                           "background-position-y": "45%"}, 1000, "linear");
     });
 };
