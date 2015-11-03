@@ -7,7 +7,13 @@ html, body, .container-fluid {
 .row {
     color: white;
     max-height: 76%;
-    -webkit-transition: height 0.5s;
+    -webkit-transition: height 0.5s, opacity 0.5s;
+}
+
+.row:hover { 
+    -webkit-box-shadow: inset 0px 0px 29px -9px rgba(255,255,255,1);
+    -moz-box-shadow: inset 0px 0px 29px -9px rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 29px -9px rgba(255,255,255,1);
 }
 
 .row img {

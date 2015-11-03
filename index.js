@@ -36,9 +36,11 @@ $(document).ready( function() {
 hoverExpand = function(p) {
     var page = "#" + $(p).attr("id");
     $(page).css({"height" : "40%"});
+    //$(page).css({"border" : "1px solid white"});
     for (i in pages) {
         if (pages[i] != "#" + $(p).attr("id")) {
             $(pages[i]).css("height", "20%");
+            $(pages[i]).css("opacity", "0.5");
         };
     };
 };
@@ -76,6 +78,8 @@ clickShow = function(p) {
 };
 
 cssReset = function() {
+    $(".row").css({"border": ""});
+    $(".row").css({"opacity" : ""});
     $(".detail").hide();
     $(".img-responsive").hide();
     $(".title").fadeTo(200, 1.0);
