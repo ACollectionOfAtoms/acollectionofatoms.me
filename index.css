@@ -90,8 +90,8 @@ html, body, .container-fluid {
         background-position: 55% 0%;
     }
     #Git { /*Fix image in future */
-        background-size: 675px auto;
-        background-position: 0% -45%;
+        background-size: 220px auto;
+        background-position: 0% 100%;
     }
     .lead {
         display: none;

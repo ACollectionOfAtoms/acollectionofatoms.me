@@ -87,7 +87,7 @@ gitCatReset = function() {
     // Below only works once! Need to do math...
     $("#Git").animate({"background-position": "0% -45%"}, 0, function() {
         $("#Git").css({"background-image": ""});
-        $("#Git").animate({"background-position-x": "0%",
-                           "background-position-y": "45%"}, 1000, "linear");
+        $("#Git").animate({"background-position-x": "0",
+                           "background-position-y": "-45%"}, 1000, "linear");
     });
 };
