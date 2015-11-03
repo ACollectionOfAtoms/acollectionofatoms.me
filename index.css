@@ -100,6 +100,17 @@ html, body, .container-fluid {
         background-position: 20% 100%;
     }
 }
+/*Medium Screens*/
+@media screen and (max-width: 760px) {
+    #Personal .contact-logo {
+        max-width: 18%;
+        max-height: 18%;
+    }
+    #Personal #self {
+        max-width: 30%;
+        max-height: 30%;
+    }
+}
 
 /*Mobile*/
 @media screen and (max-width: 480px) {
