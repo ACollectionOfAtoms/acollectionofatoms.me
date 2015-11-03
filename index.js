@@ -15,6 +15,9 @@ $(document).ready( function() {
             cssReset();
             hoverExpand($(this));
             hoverShow($(this));
+            setInterval(function() {
+                $(this).toggleClass(".rowTwo")},
+                1000);
             if (lastClicked === "Git") {
                 lastClicked = "";
                 gitCatReset();
@@ -40,7 +43,7 @@ hoverExpand = function(p) {
     for (i in pages) {
         if (pages[i] != "#" + $(p).attr("id")) {
             $(pages[i]).css("height", "20%");
-            $(pages[i]).css("opacity", "0.5");
+            $(pages[i]).css("opacity", "0.50");
         };
     };
 };
@@ -70,6 +73,7 @@ clickExpand = function(p) {
 
 clickShow = function(p) {
     var page = "#" + $(p).attr("id");
+    $(page).css({"cursor" : "auto"})
     $(page + " .img-responsive").fadeIn();
     $(page + " .title2").show();
     $(page + " .lead").fadeTo(200, 0);
@@ -78,6 +82,7 @@ clickShow = function(p) {
 };
 
 cssReset = function() {
+    $(".row").css({"cursor": ""});
     $(".row").css({"border": ""});
     $(".row").css({"opacity" : ""});
     $(".detail").hide();
@@ -90,9 +95,9 @@ gitCatReset = function() {
     $("#Git").animate({backgroundColor: "black"});
     // Below only works once! Need to do math...
     $("#Git").animate({"background-position-x": "20%",
-                       "background-position-y": "-500%"}, 0, function() {
+                       "background-position-y": "-100%"}, 0, function() {
         $("#Git").css({"background-image": ""});
         $("#Git").animate({"background-position-x": "20%",
-                           "background-position-y": "100%"}, 1200, "linear");
+                           "background-position-y": "100%"}, 1500, "linear");
     });
 };

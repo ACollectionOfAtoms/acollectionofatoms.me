@@ -8,12 +8,14 @@ html, body, .container-fluid {
     color: white;
     max-height: 76%;
     -webkit-transition: height 0.5s, opacity 0.5s;
+    cursor: pointer;
 }
 
 .row:hover { 
-    -webkit-box-shadow: inset 0px 0px 27px -12px rgba(255,255,255,1);
-    -moz-box-shadow: inset 0px 0px 27px -12px rgba(255,255,255,1);
-    box-shadow: inset 0px 0px 27px -12px rgba(255,255,255,1);
+    -webkit-box-shadow: inset 0rem 0rem 025rem 0rem rgba(255,255,255,1);
+    -moz-box-shadow: inset 0rem 0rem 0.25rem 0rem rgba(255,255,255,1);
+    box-shadow: inset 0rem 0rem 0.25rem 0rem rgba(255,255,255,1);
+    animation: pulse 2s infinite;
 }
 
 .row img {
