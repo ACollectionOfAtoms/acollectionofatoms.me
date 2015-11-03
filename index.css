@@ -26,6 +26,8 @@ html, body, .container-fluid {
 
 #Personal .title2 {
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 #Personal .img {
@@ -38,8 +40,8 @@ html, body, .container-fluid {
 #Git {
     background-image: url("./media/gitbg.png");
     background-repeat: no-repeat;
-    background-size: 1600;
-    background-position: 0% -45%;
+    background-size: 400px auto;
+    background-position: 20% 100%;
     height: 25%;
 }
 
@@ -78,8 +80,8 @@ html, body, .container-fluid {
         background-size: 2000px auto;
     }
     #Git { /*Fix image in future */
-        background-size: 1350px auto;
-        background-position: 0% 0%;
+        background-size: 700px auto;
+        background-position: 20% 100%;
     }
 }
 
@@ -91,7 +93,7 @@ html, body, .container-fluid {
     }
     #Git { /*Fix image in future */
         background-size: 220px auto;
-        background-position: 0% 100%;
+        background-position: 20% 100%;
     }
     .lead {
         display: none;
