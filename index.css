@@ -24,17 +24,28 @@ html, body, .container-fluid {
     height: 25%;
 }
 
+#Personal .title2 {
+    text-align: center;
+}
+
+#Personal .img {
+    max-height: 50%;
+    max-width: 50%;
+    border-radius: 25%;
+    margin-right: 10%;
+}
+
 #Git {
     background-image: url("../media/gitbg.png");
     background-repeat: no-repeat;
-    background-position: 0% 0%;
+    background-position: 0% -45%;
     height: 25%;
 }
 
 #Blog {
     background-image: url("../media/blogbg.jpg");
-    background-size: cover;
-    background-position: 0% 30%;
+    background-position: 30% 40%;
+    background-size: 1336px auto;
     height: 25%;
 }
 
@@ -55,11 +66,33 @@ html, body, .container-fluid {
     text-align: center;
 }
 
-.detail {
-    padding-top: 25%;
-}
-
 #Git .title2 {
     color: black;
     text-align: center;
+}
+
+/*Large Screens*/
+@media screen and (min-width: 1000px) {
+    #Blog {
+        background-size: 2000px auto;
+    }
+    #Git { /*Fix image in future */
+        background-size: 1500px auto;
+        background-position: 0% 0%;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 480px) {
+    #Blog {
+        background-size: 800px auto;
+        background-position: 55% 0%;
+    }
+    #Git { /*Fix image in future */
+        background-image: none;
+    }
+    .lead {
+        display: none;
+        visibility: hidden;
+    }
 }

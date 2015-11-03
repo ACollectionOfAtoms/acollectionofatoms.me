@@ -5,6 +5,9 @@ var pages = [
 "#Projects"
 ];
 
+var lastClicked;
+var lastPage;
+
 $(document).ready( function() {
     cssReset();
     $('.row').hover( 
@@ -12,13 +15,19 @@ $(document).ready( function() {
             cssReset();
             hoverExpand($(this));
             hoverShow($(this));
+            if (lastClicked === "Git") {
+                lastClicked = "";
+                gitCatReset();
+            };
         },
         function() {
+            lastPage = $(this).attr('id');
         }
     );
 
     $('.row').click(
         function() {
+            lastClicked = $(this).attr('id');
             clickExpand($(this));
             clickShow($(this));
     });
@@ -63,14 +72,21 @@ clickShow = function(p) {
     $(page + " .title2").show();
     $(page + " .lead").fadeTo(200, 0);
     $(page + " .detail").show();
-    // $(".title").fadeTo(200, 0);
+    $(page + " .title").fadeTo(200, 0);
 };
 
 cssReset = function() {
     $(".detail").hide();
     $(".img-responsive").hide();
     $(".title").fadeTo(200, 1.0);
-    $(".title2").hide();
-    $(".row").css({"background-image": ""});
-    $("#Git").css({"background-color": "black"});
+    $(".title2").hide("fast");
+};
+
+gitCatReset = function() {
+    $("#Git").animate({backgroundColor: "black"});
+    $("#Git").animate({"background-position": "0% -100%"}, 0, function() {
+        $("#Git").css({"background-image": ""})
+        $("#Git").animate({"background-position-x": "0%",
+                           "background-position-y": "-45%"}, 1000, "linear");
+    });
 };
