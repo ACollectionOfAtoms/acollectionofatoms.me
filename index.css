@@ -18,7 +18,7 @@ html, body, .container-fluid {
 }
 
 #Personal {
-    background-image: url("../media/personalbg.jpg");
+    background-image: url("./media/personalbg.jpg");
     background-size: cover;
     background-position: 0% 24%;
     height: 25%;
@@ -36,14 +36,14 @@ html, body, .container-fluid {
 }
 
 #Git {
-    background-image: url("../media/gitbg.png");
+    background-image: url("./media/gitbg.png");
     background-repeat: no-repeat;
     background-position: 0% -45%;
     height: 25%;
 }
 
 #Blog {
-    background-image: url("../media/blogbg.jpg");
+    background-image: url("./media/blogbg.jpg");
     background-position: 30% 40%;
     background-size: 1336px auto;
     height: 25%;
@@ -89,7 +89,8 @@ html, body, .container-fluid {
         background-position: 55% 0%;
     }
     #Git { /*Fix image in future */
-        background-image: none;
+        background-size: 675px auto;
+        background-position: 0% -45%;
     }
     .lead {
         display: none;
