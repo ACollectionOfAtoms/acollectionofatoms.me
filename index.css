@@ -131,12 +131,11 @@ html, body, .container-fluid {
 #Blog {
     overflow: hidden;
 }
+
 #iframeContent {
     width: 75%;
     height: 100%;
     border: none;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 #blogWrapper {
@@ -146,6 +145,7 @@ html, body, .container-fluid {
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 #Blog .pageTop {
