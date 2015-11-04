@@ -63,8 +63,9 @@ clickExpand = function(p) { //Similar to hoverExpand; octocat is exception
         };
         var page = "#" + $(p).attr("id");
         $(page).css({"height" : "76%"});
-        for (i in pages) {
-            if (pages[i] != "#" + $(p).attr("id")) {
+        $(page + " .pageTop").css({"height" : "0px"}); //Keep grid structure;
+        for (i in pages) {                             //But allow pages to be fully  
+            if (pages[i] != "#" + $(p).attr("id")) {   //Used
                 $(pages[i]).css("height", "8%");
             };
         };
@@ -82,12 +83,12 @@ clickShow = function(p) {
         $(page).css({"cursor" : "auto"})
         $(page + " .img-responsive").fadeIn();
         $(page + " .title2").show();
-        $(page + " .lead").fadeTo(200, 0);
         $(page + " .detail").show();
+        $(page + " .lead").fadeTo(200, 0);
         $(page + " .title").fadeTo(200, 0);
         if (page === "#Blog") {
-            $("#iframeContent").show();
-        }
+            $("#iframeContent").show("slow");
+        };
     };
 };
 
@@ -96,10 +97,11 @@ cssReset = function() { // Used to reset to intial css, hiding details and image
     $(".row").css({"border": ""});
     $(".row").css({"opacity" : ""});
     $(".detail").hide();
-    $("#iframeContent").hide();
+    $("#iframeContent").hide("slow");
     $(".img-responsive").hide();
     $(".title").fadeTo(200, 1.0);
     $(".title2").hide("fast");
+    $(".pageTop").css({"height" : ""});
 };
 
 gitCatReset = function() {  // More or less working properly; seems to jolt up and down (?) on mobile
