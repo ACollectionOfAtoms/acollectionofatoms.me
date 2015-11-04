@@ -63,7 +63,7 @@ clickExpand = function(p) { //Similar to hoverExpand; octocat is exception
         };
         var page = "#" + $(p).attr("id");
         $(page).css({"height" : "76%"});
-        $(page + " .pageTop").css({"height" : "0px"}); //Keep grid structure;
+        $(page + " .pageTop").css({"display": "none"}); //Keep grid structure;
         for (i in pages) {                             //But allow pages to be fully  
             if (pages[i] != "#" + $(p).attr("id")) {   //Used
                 $(pages[i]).css("height", "8%");
@@ -101,7 +101,7 @@ cssReset = function() { // Used to reset to intial css, hiding details and image
     $(".img-responsive").hide();
     $(".title").fadeTo(200, 1.0);
     $(".title2").hide("fast");
-    $(".pageTop").css({"height" : ""});
+    $(".pageTop").css({"display" : ""});
 };
 
 gitCatReset = function() {  // More or less working properly; seems to jolt up and down (?) on mobile

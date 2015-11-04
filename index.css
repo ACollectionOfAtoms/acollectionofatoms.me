@@ -143,4 +143,11 @@ html, body, .container-fluid {
     height: 100%;
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: -1px;
+    padding-bottom: 0;
+}
+
+#Blog .pageTop {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
