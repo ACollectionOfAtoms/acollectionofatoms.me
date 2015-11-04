@@ -146,6 +146,7 @@ html, body, .container-fluid {
     padding-top: 0;
     padding-bottom: 0;
     -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
 }
 
 #Blog .pageTop {
