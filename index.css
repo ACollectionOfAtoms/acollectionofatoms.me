@@ -60,6 +60,10 @@ html, body, .container-fluid {
     height: 25%;
 }
 
+#Git img {
+    border-radius: 100%;
+}
+
 #Blog {
     background-image: url("./media/blogbg.jpg");
     background-position: 30% 40%;
@@ -147,6 +151,7 @@ html, body, .container-fluid {
     padding-bottom: 0;
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
+    overflow: hidden;
 }
 
 #Blog .pageTop {
