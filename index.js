@@ -5,80 +5,90 @@ var pages = [
 "#Projects"
 ];
 
-var lastClicked;
-var lastPage; //Currently not in use!
+var lastClicked;    // Know where the cursor is
+var lastPage;       // at all times!
 
 $(document).ready( function() {
     cssReset();
     $('.row').hover( 
         function() { // Upon entrance
-            cssReset();
-            hoverExpand($(this));
-            hoverShow($(this));
-            if (lastClicked === "Git") {
-                lastClicked = ""; 
-                gitCatReset();
+            if (lastClicked == null)    // e.g if the user has not clicked a div
+                cssReset();             // do the following to make 
+                hoverShow($(this));     // Do the following to create "wave" effect.
+                hoverExpand($(this));
+            } else if (lastClicked != $(this).attr("id")) {
+                hoverShow($(this));     // Otherwise just show the .lead of each div
             };
-        }, // Upon exit, just catch id.
-        function() {
-            lastPage = $(this).attr('id');
+        }, 
+        function() { // Upon exit
+            lastPage = $(this).attr('id');  // Track that cursor!
+            hoverHide();                    // Hide .lead  
         }
     );
 
     $('.row').click(
         function() {
-            lastClicked = $(this).attr('id');
-            clickExpand($(this));
-            clickShow($(this));
+            clickExpand($(this));               // Expand
+            clickShow($(this));                 // Display .detail and images
+            lastClicked = $(this).attr('id');   // Track cursor 
     });
 });
 
 hoverExpand = function(p) { // Expand div and resize others accordingly
     var page = "#" + $(p).attr("id");
     $(page).css({"height" : "40%"});
-    //$(page).css({"border" : "1px solid white"});
-    for (i in pages) {
+    for (i in pages) {  
         if (pages[i] != "#" + $(p).attr("id")) {
             $(pages[i]).css("height", "20%");
-            //$(pages[i]).css("opacity", "0.50");
         };
     };
 };
 
-hoverShow = function(p) { // Modify div content on hover
+hoverShow = function(p) { // Show .lead
     var page = "#" + $(p).attr("id");
     $(page + " .lead").fadeTo(200, 1.0);
-    for (i in pages) {
-        if (pages[i] != "#" + $(p).attr("id")) {
-            $(pages[i] + " .lead").fadeTo(200, 0);
-        };
-    };
 };
 
-clickExpand = function(p) { //Similar to hover; octocat is exception
-    var page = "#" + $(p).attr("id");
-    $(page).css({"height" : "76%"});
-    for (i in pages) {
-        if (pages[i] != "#" + $(p).attr("id")) {
-            $(pages[i]).css("height", "8%");
+hoverHide = function() { // Hide .lead
+    var page = "#" + lastPage;
+    $(page + " .lead").fadeTo(200, 0);
+};
+
+clickExpand = function(p) { //Similar to hoverExpand; octocat is exception
+    if (lastClicked != $(p).attr("id")) {   // Was this div just clicked? If so do nothing. 
+        if (lastClicked == null) {          // Is this the first click? 
+            lastClicked = "";               // If so, remove null association with lastClicked
+        }else{                              // Proceed to focus on div, and check for the 
+            cssReset();                     // git octocat special case.
         };
-    };
-    if (page === "#Git") {
-        $(page).css({'background-image': 'none'}).css({'background-color': 'white'});
+        var page = "#" + $(p).attr("id");
+        $(page).css({"height" : "76%"});
+        for (i in pages) {
+            if (pages[i] != "#" + $(p).attr("id")) {
+                $(pages[i]).css("height", "8%");
+            };
+        };
+        if (lastClicked === "Git") {
+            gitCatReset();
+        }else if (page === "#Git") {;
+            $(page).css({'background-image': 'none'}).css({'background-color': 'white'});
+        };
     };
 };
 
 clickShow = function(p) {
-    var page = "#" + $(p).attr("id");
-    $(page).css({"cursor" : "auto"})
-    $(page + " .img-responsive").fadeIn();
-    $(page + " .title2").show();
-    $(page + " .lead").fadeTo(200, 0);
-    $(page + " .detail").show();
-    $(page + " .title").fadeTo(200, 0);
+    if (lastClicked != $(p).attr("id")) {   // Was this div just clicked? If so, do nothing.
+        var page = "#" + $(p).attr("id");
+        $(page).css({"cursor" : "auto"})
+        $(page + " .img-responsive").fadeIn();
+        $(page + " .title2").show();
+        $(page + " .lead").fadeTo(200, 0);
+        $(page + " .detail").show();
+        $(page + " .title").fadeTo(200, 0);
+    };
 };
 
-cssReset = function() {
+cssReset = function() { // Used to reset to intial css, hiding details and images of rows
     $(".row").css({"cursor": ""});
     $(".row").css({"border": ""});
     $(".row").css({"opacity" : ""});
@@ -88,9 +98,8 @@ cssReset = function() {
     $(".title2").hide("fast");
 };
 
-gitCatReset = function() { 
+gitCatReset = function() {  // More or less working properly; seems to jolt up and down (?) on mobile
     $("#Git").animate({backgroundColor: "black"});
-    // More or less working properly; seems to jolt up and down (?) on mobile
     $("#Git").animate({"background-position-x": "20%",// First get the octocat far down
                        "background-position-y": "-100%"}, 0, function() {
         $("#Git").css({"background-image": ""}); // then reactivate its existence 

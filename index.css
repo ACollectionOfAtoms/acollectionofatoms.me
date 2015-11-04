@@ -75,6 +75,7 @@ html, body, .container-fluid {
 
 .lead {
     opacity: 0;
+    text-align: center;
 }
 
 .title {
