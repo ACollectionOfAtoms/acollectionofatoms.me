@@ -72,14 +72,6 @@ clickExpand = function(p) { //Similar to hoverExpand; octocat is exception
                 $(pages[i]).css("height", "8%");
             };
         };
-        if (lastClicked === "Git") {
-            gitCatReset();
-        }else if (page === "#Git") {;
-            $(page).css({'background-image': 'none'}).css({'background-color': 'white'});
-        };
-        if (page === "#Blog"){
-            $(page + " #blogWrapper").css({'overflow-y': 'scroll'});
-        };
     };
 };
 
@@ -95,6 +87,14 @@ clickShow = function(p) {
         if (page === "#Blog") {
             $("#iframeContent").show("slow");
         };
+        if (lastClicked === "Git") {
+            gitCatReset();
+        }else if (page === "#Git") {;
+            $(page).css({'background-image': 'none'}).css({'background-color': 'white'});
+        };
+        if (page === "#Blog"){
+            $(page + " #blogWrapper").css({'overflow-y': 'scroll'});
+        };
     };
 };
 
@@ -102,7 +102,8 @@ cssReset = function() { // Used to reset to intial css, hiding details and image
     $(".row").css({"cursor": "",
                    "border": "",
                    "opacity" : "",
-                   "overflow-y": ""});
+                   "overflow": ""});
+    $("#Blog #blogWrapper").css({"overflow-y": "hidden"});
     $(".detail").hide();
     $("#iframeContent").hide("slow");
     $(".img-responsive").hide();
