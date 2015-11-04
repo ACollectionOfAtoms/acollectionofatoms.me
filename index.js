@@ -78,7 +78,7 @@ clickExpand = function(p) { //Similar to hoverExpand; octocat is exception
             $(page).css({'background-image': 'none'}).css({'background-color': 'white'});
         };
         if (page === "#Blog"){
-            $(page + " .blogWrapper").css({'overflow-y': 'scroll'});
+            $(page + " #blogWrapper").css({'overflow-y': 'scroll'});
         };
     };
 };
