@@ -12,9 +12,9 @@ $(document).ready( function() {
     cssReset();
     $('.row').hover( 
         function() { // Upon entrance
-            if (lastClicked == null)    // e.g if the user has not clicked a div
-                cssReset();             // do the following to
-                hoverShow($(this));     // create "wave" effect.
+            if (lastClicked == null) {   // e.g if the user has not clicked a div
+                cssReset();             // do the following to make 
+                hoverShow($(this));     // Do the following to create "wave" effect.
                 hoverExpand($(this));
             } else if (lastClicked != $(this).attr("id")) {
                 hoverShow($(this));     // Otherwise just show the .lead of each div
@@ -28,9 +28,9 @@ $(document).ready( function() {
 
     $('.row').click(
         function() {
-            clickExpand($(this));               // Expand...
-            clickShow($(this));                 // Display .detail and images...
-            lastClicked = $(this).attr('id');   // Track cursor...
+            clickExpand($(this));               // Expand
+            clickShow($(this));                 // Display .detail and images
+            lastClicked = $(this).attr('id');   // Track cursor 
     });
 });
 
@@ -57,7 +57,7 @@ hoverHide = function() { // Hide .lead
 clickExpand = function(p) { //Similar to hoverExpand; octocat is exception
     if (lastClicked != $(p).attr("id")) {   // Was this div just clicked? If so do nothing. 
         if (lastClicked == null) {          // Is this the first click? 
-            lastClicked = "";               // If so, remove null association from lastClicked
+            lastClicked = "";               // If so, remove null association with lastClicked
         }else{                              // Proceed to focus on div, and check for the 
             cssReset();                     // git octocat special case.
         };
