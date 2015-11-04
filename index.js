@@ -7,24 +7,27 @@ var pages = [
 
 var lastClicked;    // Know where the cursor is
 var lastPage;       // at all times!
+var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
 
 $(document).ready( function() {
     cssReset();
-    $('.row').hover( 
-        function() { // Upon entrance
-            if (lastClicked == null) {   // e.g if the user has not clicked a div
-                cssReset();             // do the following to make 
-                hoverShow($(this));     // Do the following to create "wave" effect.
-                hoverExpand($(this));
-            } else if (lastClicked != $(this).attr("id")) {
-                hoverShow($(this));     // Otherwise just show the .lead of each div
-            };
-        }, 
-        function() { // Upon exit
-            lastPage = $(this).attr('id');  // Track that cursor!
-            hoverHide();                    // Hide .lead  
-        }
-    );
+    if ( iOS != true) {
+        $('.row').hover( 
+            function() { // Upon entrance
+                if (lastClicked == null) {   // e.g if the user has not clicked a div
+                    cssReset();             // do the following to make 
+                    hoverShow($(this));     // Do the following to create "wave" effect.
+                    hoverExpand($(this));
+                } else if (lastClicked != $(this).attr("id")) {
+                    hoverShow($(this));     // Otherwise just show the .lead of each div
+                };
+            }, 
+            function() { // Upon exit
+                lastPage = $(this).attr('id');  // Track that cursor!
+                hoverHide();                    // Hide .lead  
+            }
+        );
+    };
 
     $('.row').click(
         function() {
