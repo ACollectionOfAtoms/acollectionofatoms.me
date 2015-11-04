@@ -85,6 +85,9 @@ clickShow = function(p) {
         $(page + " .lead").fadeTo(200, 0);
         $(page + " .detail").show();
         $(page + " .title").fadeTo(200, 0);
+        if (page === "#Blog") {
+            $("#iframeContent").show();
+        }
     };
 };
 
@@ -93,6 +96,7 @@ cssReset = function() { // Used to reset to intial css, hiding details and image
     $(".row").css({"border": ""});
     $(".row").css({"opacity" : ""});
     $(".detail").hide();
+    $("#iframeContent").hide();
     $(".img-responsive").hide();
     $(".title").fadeTo(200, 1.0);
     $(".title2").hide("fast");

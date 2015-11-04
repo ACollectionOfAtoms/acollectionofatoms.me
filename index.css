@@ -9,6 +9,7 @@ html, body, .container-fluid {
     max-height: 76%;
     -webkit-transition: height 0.75s, opacity 0.5s;
     cursor: pointer;
+    overflow: auto;
 }
 
 .row:hover { 
@@ -127,4 +128,18 @@ html, body, .container-fluid {
         display: none;
         visibility: hidden;
     }
+}
+
+#Blog {
+    overflow: hidden;
+}
+#iframeContent {
+    width: 75%;
+    height: 75%;
+    border: none;
+}
+
+#blogWrapper {
+    text-align: center;
+    height: 100%;
 }
