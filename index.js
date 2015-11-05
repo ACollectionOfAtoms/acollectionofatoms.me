@@ -112,7 +112,8 @@ clickShow = function(p) {
         };
         if (lastClicked === "Git") {
             gitCatReset();
-        }else if (page === "#Git") {;
+        }else if (page === "#Git") {
+            gitRSS();
             $(page)
             .css({'background-image': 'none'})
             .css({'background-color': 'white'})
@@ -148,5 +149,17 @@ gitCatReset = function() {  // More or less working properly; seems to jolt up a
                        "background-size" : ""}); // then reactivate its existence 
         $("#Git").animate({"background-position-x": "20%",// Crawl it up to original position
                            "background-position-y": "100%"}, 1500, "linear");
+    });
+};
+
+gitRSS = function() {
+    console.log("in");
+    $.get('http://github.com/ACollectionOfAtoms.atom', function(data) {
+        $(data).find("entry").each(function() {
+            var el = $(this);
+            console.log("author " + el.find("author").text());
+            console.log("published " + el.find("published").text());
+            console.log("content " + el.find("author").text());
+        });
     });
 };
