@@ -92,7 +92,7 @@ clickShow = function(p) {
         }else if (page === "#Git") {;
             $(page)
             .css({'background-image': 'none'})
-            .css({'background-color': 'rgba(255,255,255,1'})
+            .css({'background-color': 'white'})
             .css({'background-image': 'url("./media/contri.png")',
                   'background-size' : '100%'});
         };
