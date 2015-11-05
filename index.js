@@ -8,6 +8,7 @@ var pages = [
 var lastClicked;    // Know where the cursor is
 var lastPage;       // at all times!
 var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
+var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 $(document).ready( function() {
     cssReset();
@@ -62,7 +63,10 @@ clickExpand = function(p) { //Similar to hoverExpand; octocat is exception
         if (lastClicked == null) {          // Is this the first click? 
             lastClicked = "";               // If so, remove null association with lastClicked
         }else{                              // Proceed to focus on div, and check for the 
-            cssReset();                     // git octocat special case.
+            cssReset();
+            if (mobile === false) {                     // git octocat special case.
+                clearTimeout(focusTimer);
+            };
         };
         var page = "#" + $(p).attr("id");
         $(page).css({"height" : "76%"});
@@ -71,6 +75,17 @@ clickExpand = function(p) { //Similar to hoverExpand; octocat is exception
             if (pages[i] != "#" + $(p).attr("id")) {   //Used
                 $(pages[i]).css("height", "8%");
             };
+        };
+        if ( mobile === false) {
+            focusTimer = setTimeout(function() {    // If user is on page for 3s "focus" closer. 
+                    $(page).css({"height" : "88%"});// All these expands could really be refactored!
+                    for (i in pages) {
+                        if (pages[i] != "#" + $(p).attr("id")) {
+                            $(pages[i]).css("height", "4%");
+                        };
+                    };
+                },
+                3000);
         };
     };
 };

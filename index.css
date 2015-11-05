@@ -6,7 +6,7 @@ html, body, .container-fluid {
 
 .row {
     color: white;
-    max-height: 76%;
+    max-height: 91%;
     -webkit-transition: height 0.5s, opacity 0.5s;
     cursor: pointer;
     overflow: hidden;
@@ -134,7 +134,7 @@ img.map, map area {
         background-size: 220px auto;
         background-position: 20% 100%;
     }
-    .lead {
+    .lead { /*None js way to cater to mobile users..*/
         display: none;
         visibility: hidden;
     }
@@ -149,7 +149,7 @@ img.map, map area {
 }
 
 #iframeContent {
-    width: 75%;
+    width: 90%;
     height: 99.1%;
     border: none;
 }
