@@ -7,8 +7,11 @@ var pages = [
 
 var lastClicked;    // Know where the cursor is
 var lastPage;       // at all times!
-var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
-var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+var iOS = /iPad|iPhone|iPod/.test(navigator.platform);    
+var mobile = false;
+if( $('.lead').css('display') === 'none') {
+    mobile = true;       
+};
 
 $(document).ready( function() {
     cssReset();
