@@ -90,7 +90,11 @@ clickShow = function(p) {
         if (lastClicked === "Git") {
             gitCatReset();
         }else if (page === "#Git") {;
-            $(page).css({'background-image': 'none'}).css({'background-color': 'white'});
+            $(page)
+            .css({'background-image': 'none'})
+            .css({'background-color': 'rgba(255,255,255,1'})
+            .css({'background-image': 'url("./media/contri.png")',
+                  'background-size' : '100%'});
         };
         if (page === "#Blog"){
             $(page + " #blogWrapper").css({'overflow-y': 'scroll'});
@@ -103,8 +107,8 @@ cssReset = function() { // Used to reset to intial css, hiding details and image
                    "border": "",
                    "opacity" : "",
                    "overflow": ""});
-    $("#Blog #blogWrapper").css({"overflow-y": "hidden"});
-    $(".detail").hide();
+    $("#Blog #blogWrapper").css({"overflow-y": "hidden"}); // <- Resetting .row doesn't 
+    $(".detail").hide();                                   // work, so this is req. Why?!
     $("#iframeContent").hide("slow");
     $(".img-responsive").hide();
     $(".title").fadeTo(200, 1.0);
@@ -113,10 +117,12 @@ cssReset = function() { // Used to reset to intial css, hiding details and image
 };
 
 gitCatReset = function() {  // More or less working properly; seems to jolt up and down (?) on mobile
+    $("#Git").css({"background-image": "none"});
     $("#Git").animate({backgroundColor: "black"});
     $("#Git").animate({"background-position-x": "20%",// First get the octocat far down
                        "background-position-y": "-100%"}, 0, function() {
-        $("#Git").css({"background-image": ""}); // then reactivate its existence 
+        $("#Git").css({"background-image": "",
+                       "background-size" : ""}); // then reactivate its existence 
         $("#Git").animate({"background-position-x": "20%",// Crawl it up to original position
                            "background-position-y": "100%"}, 1500, "linear");
     });

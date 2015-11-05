@@ -7,7 +7,7 @@ html, body, .container-fluid {
 .row {
     color: white;
     max-height: 76%;
-    -webkit-transition: height 0.75s, opacity 0.5s;
+    -webkit-transition: height 0.5s, opacity 0.5s;
     cursor: pointer;
     overflow: hidden;
 }
@@ -41,11 +41,9 @@ html, body, .container-fluid {
     text-align: center;
 }
 
-#Personal .img {
+#Personal img {
     max-height: 50%;
     max-width: 50%;
-    border-radius: 25%;
-    margin-right: 10%;
 }
 
 #Personal .detail {
@@ -57,6 +55,10 @@ html, body, .container-fluid {
     height: 20%;
 }
 
+img.map, map area {
+    outline: none;
+}
+
 #Git {
     background-image: url("./media/gitbg.png");
     background-repeat: no-repeat;
@@ -65,8 +67,14 @@ html, body, .container-fluid {
     height: 25%;
 }
 
-#Git img {
-    border-radius: 100%;
+#gitlogo img{
+    border-radius: 0%;
+    size: 100%;
+}
+
+#Git .title2 {
+    color: black;
+    text-align: center;
 }
 
 #Blog {
@@ -91,11 +99,6 @@ html, body, .container-fluid {
 }
 
 .title2 {
-    text-align: center;
-}
-
-#Git .title2 {
-    color: black;
     text-align: center;
 }
 
