@@ -9,9 +9,14 @@ var lastClicked;    // Know where the cursor is
 var lastPage;       // at all times!
 var iOS = /iPad|iPhone|iPod/.test(navigator.platform);    
 var mobile = false;
+
 if( $('.lead').css('display') === 'none') {
     mobile = true;       
 };
+
+$(window).load(function() {
+    $("#loaderOut").fadeOut("slow", function(){$("#loaderOut").remove()});
+});
 
 $(document).ready( function() {
     cssReset();

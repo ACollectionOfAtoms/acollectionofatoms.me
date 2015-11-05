@@ -169,3 +169,45 @@ img.map, map area {
     margin-bottom: 0;
     padding-bottom: 0;
 }
+
+#loaderOut {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    text-align: center;
+    vertical-align: middle;
+    display: table;
+    background: linear-gradient(270deg, #6b6148, #84887a, #8d5c31, #2e3830, #576b6b);
+    background-size: 1000% 1000%;
+    -webkit-animation: loadingBG 30s ease infinite;
+    -moz-animation: loadingBG 30s ease infinite;
+    animation: loadingBG 30s ease infinite;
+
+}
+
+#loaderIn {
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/*Animation brought to you by http://www.gradient-animator.com/ */
+@-webkit-keyframes loadingBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes loadingBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes loadingBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
