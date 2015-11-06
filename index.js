@@ -1,4 +1,4 @@
-var pages = [
+pages = [
 "#Personal",
 "#Git",
 "#Blog",
@@ -7,8 +7,8 @@ var pages = [
 
 var lastClicked;    // Know where the cursor is
 var lastPage;       // at all times!
-var iOS = /iPad|iPhone|iPod/.test(navigator.platform);    
-var mobile = false;
+iOS = /iPad|iPhone|iPod/.test(navigator.platform);    
+mobile = false;
 
 if( $('.lead').css('display') === 'none') {
     mobile = true;       
@@ -20,6 +20,7 @@ $(window).load(function() {
 
 $(document).ready( function() {
     cssReset();
+    gitJSON();
     if ( iOS != true) {
         $('.row').hover( 
             function() { // Upon entrance
@@ -113,12 +114,20 @@ clickShow = function(p) {
         if (lastClicked === "Git") {
             gitCatReset();
         }else if (page === "#Git") {
-            gitRSS();
             $(page)
-            .css({'background-image': 'none'})
-            .css({'background-color': 'white'})
-            .css({'background-image': 'url("./media/contri.png")',
-                  'background-size' : '100%'});
+                .css({'background-image': 'none'})
+                .css({'background-color': 'white'})
+                .css({'background-image': 'url("./media/contri.png")',
+                      'background-size' : '100%'});
+            
+            $("#branchName").text(pushBranch);
+            $("#repoLink").attr("href", pushRepoUrl);
+            $("#repoText").text(pushRepoName);
+            $("#messageNameUrl").attr("href", pushMessageUrl);
+            $("#messageNameText").text(pushMessageName);
+            $("#messageText").text(pushMessage);
+            $("#starLink").attr("href", starRepoUrl);
+            $("#starName").text(starRepoName);
         };
         if (page === "#Blog"){
             $(page + " #blogWrapper").css({'overflow-y': 'scroll'});
@@ -152,14 +161,25 @@ gitCatReset = function() {  // More or less working properly; seems to jolt up a
     });
 };
 
-gitRSS = function() {
-    console.log("in");
-    $.get('http://github.com/ACollectionOfAtoms.atom', function(data) {
-        $(data).find("entry").each(function() {
-            var el = $(this);
-            console.log("author " + el.find("author").text());
-            console.log("published " + el.find("published").text());
-            console.log("content " + el.find("author").text());
-        });
+gitJSON = function() {
+    $.getJSON("https://api.github.com/users/ACollectionOfAtoms/events", function(data){
+        var events = {"PushEvent": 0, "WatchEvent": 0}; //Switch used to find first occurence
+        for (i in data) { // Single loop only going as deep as needed.
+            if (data[i].type in events && events[data[i].type] === 0 && data[i].type === "PushEvent"){
+                pushRepoName = data[i].repo.name;
+                pushRepoUrl = data[i].repo.url;
+                pushBranch = data[i].payload.ref;
+                pushBranch = pushBranch.split("/");
+                pushBranch = pushBranch[pushBranch.length - 1];
+                pushMessageName = data[i].payload.before.substring(0,6);
+                pushMessageUrl = data[i].payload.commits[0].url;
+                pushMessage = data[i].payload.commits[0].message.substring(0,139)+ "...";
+                events[data[i].type] = 1;
+            }else if (data[i].type in events && events[data[i].type] === 0 && data[i].type === "WatchEvent") {
+                starRepoName = data[i].repo.name;
+                starRepoUrl = data[i].repo.url;
+                events[data[i].type] = 1;
+            };
+        };
     });
 };

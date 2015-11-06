@@ -19,8 +19,6 @@ html, body, .container-fluid {
 }
 
 .row img {
-    max-height: 50%;
-    max-width: 50%;
     border-radius: 25%;
     margin: auto;
 }
@@ -67,14 +65,18 @@ img.map, map area {
     height: 25%;
 }
 
-#gitlogo img{
+#gitlogo {
     border-radius: 0%;
-    size: 100%;
 }
 
 #Git .title2 {
     color: black;
     text-align: center;
+}
+
+#gitStar {
+    height: 50px;
+    width: auto;
 }
 
 #Blog {
@@ -100,6 +102,7 @@ img.map, map area {
 
 .title2 {
     text-align: center;
+    word-wrap: break-word;
 }
 
 /*Large Screens*/
@@ -210,4 +213,8 @@ img.map, map area {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+#branchName {
+    font-weight: 900;
 }
