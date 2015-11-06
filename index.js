@@ -7,7 +7,7 @@ pages = [
 
 var lastClicked;    // Know where the cursor is
 var lastPage;       // at all times!
-iOS = /iPad|iPhone|iPod/.test(navigator.platform);    
+iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;   
 mobile = false;
 
 if( $('.lead').css('display') === 'none') {
@@ -175,7 +175,12 @@ gitJSON = function() {
                 pushMessageName = data[i].payload.before.substring(0,6);
                 pushMessageUrl = data[i].payload.commits[0].url;
                 pushMessageUrl = httpURL(pushMessageUrl)
-                pushMessage = data[i].payload.commits[0].message.substring(0,139);
+                pushMessage = data[i].payload.commits[0].message;
+                if (pushMessage.length > 140) {
+                    pushMessage = pushMessage.substring(0,139) + "...";
+                }else{
+                    pushMessage = pushMessage.substring(0,139)
+                };
                 events[data[i].type] = 1;
             }else if (data[i].type in events && events[data[i].type] === 0 && data[i].type === "WatchEvent") {
                 starRepoName = data[i].repo.name;
