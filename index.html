@@ -23,8 +23,7 @@
   <body>
     <div id="loaderOut"> <div id="loaderIn"><h1 id="elip">loading<h1> </div></div>
     <div class="container-fluid">
-
-      <div class="row" id="Personal">
+      <div class="row page" id="Personal">
         <div class="col-xs-6 pageTop">
           <span class="title"> P e r s o n a l </span>
         </div>
@@ -47,44 +46,50 @@
         </div>
       </div>
 
-      <div class="row" id="Git">
+      <div class="row page" id="Git">
         <div class="col-md-6 pageTop">
           <span class="title"> G i t </span>
         </div>
         <div class="col-md-6 pageTop">
           <p class="lead"> Wonderful Version Control </p>
         </div>
+        <div class="col-xs-12 col-md-6" id="gitTop">
+          <h4 class = "title2" id="follow"> Follow me on Github! </h4> 
+          <div id="gitlogoWrap"><a href="https://github.com/ACollectionOfAtoms" target="_blank">
+            <img src="./media/gitlogo.png" class="img-responsive" id="gitlogo"></a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6" id="gitBottom">
+          <h3 class="title2" id="activity">Latest Activity </h3>
+          <div class="row">
+            <div class="col-xs-6 col-md-12" id="push">
+              <h4 class="title2 gittext"> Pushed to 
+                  <span id="branchName"></span> at 
+                <a id="repoLink" target="_blank">
+                  <span id="repoText"></span>
+                </a>
+              </h4>
+              <h5 class="title2 gittext">
+                <a href="" id="messageNameUrl" target="_blank">
+                  <span id="messageNameText"></span>
+                </a>
+                <span id="messageText"></span>
+              </h5>
+            </div>
 
-        <div class="col-xs-12 gitTop">
-          <h4 class = "title2"> Follow me on Github! </h4> 
-          <a href="https://github.com/ACollectionOfAtoms" target="_blank"><img id="gitlogo" src="./media/gitlogo.png" class="img-responsive"></a>
-          <h3 class="title2" >Latest Activity </h3>
-        </div>
-        <div class="col-xs-6 gitBottom" id="push">
-          <h4 class="title2"> Pushed to 
-              <span id="branchName"></span> at 
-            <a id="repoLink" target="_blank">
-              <span id="repoText"></span>
-            </a>
-          </h4>
-          <h5 class="title2">
-            <a href="" id="messageNameUrl" target="_blank">
-              <span id="messageNameText"></span>
-            </a>
-            <span id="messageText"></span>
-          </h5>
-        </div>
-        <div class="col-xs-6 gitBottom" id="starred">
-          <h4 class="title2"> Starred 
-            <a id="starLink" href="">
-              <span id="starName"></span>
-            </a>
-          </h4>
-          <img id="gitStar" class="img-responsive" src="./media/gitstar.png"/>
+            <div class="col-xs-6 col-md-12" id="starred">
+              <h4 class="title2"> Starred 
+                <a id="starLink" href="">
+                  <span id="starName"></span>
+                </a>
+              </h4>
+              <img id="gitStar" class="img-responsive" src="./media/gitstar.png"/>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="row" id="Blog">
+      <div class="row page" id="Blog">
         <div class="col-md-6 pageTop">
           <span class="title"> B l o g </span>
         </div>
@@ -98,7 +103,7 @@
         </div>
       </div>
 
-      <div class="row" id="Projects">
+      <div class="row page" id="Projects">
         <div class="col-md-6 pageTop">
           <span class="title"> P r o j e c t s </span>
         </div>

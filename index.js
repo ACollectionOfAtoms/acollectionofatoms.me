@@ -22,7 +22,7 @@ $(document).ready( function() {
     cssReset();
     gitJSON();
     if ( iOS != true) {
-        $('.row').hover( 
+        $('.row.page').hover( 
             function() { // Upon entrance
                 if (lastClicked == null) {   // e.g if the user has not clicked a div
                     cssReset();             // do the following to make 
@@ -39,7 +39,7 @@ $(document).ready( function() {
         );
     };
 
-    $('.row').click(
+    $('.row.page').click(
         function() {
             clickExpand($(this));               // Expand
             clickShow($(this));                 // Display .detail and images
@@ -136,11 +136,11 @@ clickShow = function(p) {
 };
 
 cssReset = function() { // Used to reset to intial css, hiding details and images of rows
-    $(".row").css({"cursor": "",
+    $(".row.page").css({"cursor": "",
                    "border": "",
                    "opacity" : "",
                    "overflow": ""});
-    $("#Blog #blogWrapper").css({"overflow-y": "hidden"}); // <- Resetting .row doesn't 
+    $("#Blog #blogWrapper").css({"overflow-y": "hidden"}); // <- Resetting .row.page doesn't 
     $(".detail").hide();                                   // work, so this is req. Why?!
     $("#iframeContent").hide("slow");
     $(".img-responsive").hide();
@@ -175,7 +175,7 @@ gitJSON = function() {
                 pushMessageName = data[i].payload.before.substring(0,6);
                 pushMessageUrl = data[i].payload.commits[0].url;
                 pushMessageUrl = httpURL(pushMessageUrl)
-                pushMessage = data[i].payload.commits[0].message.substring(0,139)+ "...";
+                pushMessage = data[i].payload.commits[0].message.substring(0,139);
                 events[data[i].type] = 1;
             }else if (data[i].type in events && events[data[i].type] === 0 && data[i].type === "WatchEvent") {
                 starRepoName = data[i].repo.name;

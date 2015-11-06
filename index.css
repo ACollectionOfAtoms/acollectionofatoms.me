@@ -4,7 +4,7 @@ html, body, .container-fluid {
     overflow: hidden;
 }
 
-.row {
+.row.page {
     color: white;
     max-height: 91%;
     -webkit-transition: height 0.5s, opacity 0.5s;
@@ -12,13 +12,13 @@ html, body, .container-fluid {
     overflow: hidden;
 }
 
-.row:hover { 
+.row.page:hover { 
     -webkit-box-shadow: inset 0rem 0rem 0.10rem 0rem rgba(255,255,255,1);
     -moz-box-shadow: inset 0rem 0rem 0.10rem 0rem rgba(255,255,255,1);
     box-shadow: inset 0rem 0rem 0.10rem 0rem rgba(255,255,255,1);
 }
 
-.row img {
+.row.page img {
     border-radius: 25%;
     margin: auto;
 }
@@ -66,15 +66,33 @@ img.map, map area {
 }
 
 #gitlogo {
-    width: 50%;
-    height: 50%;
-    object-fit: contain;
+    width: 300px;
+    height:300px;
 }
-.gitTop {
-    height: 50%;
+#gitlogoWrap {
+    width: 300px;
+    height: 300px;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    border-radius: 200px;
+    margin: auto;
+    cursor: pointer;
 }
-.gitBottom {
-    height: 50%;
+
+#gitlogoWrap:hover{
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+    -webkit-box-shadow: 0px 9px 20px 5px #59cdf4;
+    -moz-box-shadow:    0px 9px 20px 5px #59cdf4;
+    box-shadow:         0px 9px 20px 5px #59cdf4;
+}
+#gitTop {
+    height: 100%;
+}
+
+#gitBottom {
+    height: 100%;
 }
 
 #Git .title2 {
@@ -122,9 +140,18 @@ img.map, map area {
         background-size: 700px auto;
         background-position: 20% 100%;
     }
+    #activity {
+        font-size: 25px;
+    }
+    #follow {
+        font-size: 25px;
+    }
+    .title2.gittext {
+        font-size: 12.5px;
+    }
 }
 /*Medium Screens*/
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 800px) {
     #Personal .contact-logo {
         max-width: 18%;
         max-height: 18%;
@@ -132,6 +159,28 @@ img.map, map area {
     #Personal #self {
         max-width: 35%;
         max-height: 35%;
+    }
+    #gitlogo {
+    width: 100px;
+    height:100px;
+    }
+    #gitlogoWrap {
+        width: 100px;
+        height: 100px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #gitlogoWrap:hover{
+        -webkit-border-radius:50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        -webkit-box-shadow: 0px 9px 20px 5px #59cdf4;
+        -moz-box-shadow:    0px 9px 20px 5px #59cdf4;
+        box-shadow:         0px 9px 20px 5px #59cdf4;
     }
 }
 
@@ -144,6 +193,15 @@ img.map, map area {
     #Git { /*Fix image in future */
         background-size: 220px auto;
         background-position: 20% 100%;
+    }
+    #gitTop {
+        height: 30%;
+    }
+    #gitBottom {
+        height: 70%;
+    }
+    #activity {
+        margin-top: 0;
     }
     .lead { /*None js way to cater to mobile users..*/
         display: none;
