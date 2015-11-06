@@ -128,6 +128,19 @@ clickShow = function(p) {
             $("#messageText").text(pushMessage);
             $("#starLink").attr("href", starRepoUrl);
             $("#starName").text(starRepoName);
+            var logoradius = $("gitlogoWrap").css("border-radius");
+            $("#gitlogoWrap").hover(function() {
+                $(this).css({"-webkit-border-radius":logoradius,
+                            "-moz-border-radius": logoradius,
+                            "border-radius": logoradius,
+                            "-webkit-box-shadow": "0px 9px 20px 5px #59cdf4",
+                            "-moz-box-shadow":    "0px 9px 20px 5px #59cdf4",
+                            "box-shadow":         "0px 9px 20px 5px #59cdf4"});
+                $(this).effect("bounce", {distance: 10, times: 1}, "fast");
+                            },function(){
+                $(this).css({"-webkit-box-shadow": "",
+                            "-moz-box-shadow":    "",
+                            "box-shadow":         ""})});
         };
         if (page === "#Blog"){
             $(page + " #blogWrapper").css({'overflow-y': 'scroll'});
@@ -147,6 +160,7 @@ cssReset = function() { // Used to reset to intial css, hiding details and image
     $(".title").fadeTo(200, 1.0);
     $(".title2").hide("fast");
     $(".pageTop").css({"display" : ""});
+    $("#gitlogoWrap").unbind("mouseenter mouseleave");
 };
 
 gitCatReset = function() {  // More or less working properly; seems to jolt up and down (?) on mobile

@@ -79,15 +79,6 @@ img.map, map area {
     cursor: pointer;
 }
 
-#gitlogoWrap:hover{
-    -webkit-border-radius:50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    -webkit-box-shadow: 0px 9px 20px 5px #59cdf4;
-    -moz-box-shadow:    0px 9px 20px 5px #59cdf4;
-    box-shadow:         0px 9px 20px 5px #59cdf4;
-}
-
 #gitTop {
     height: 100%;
 }
@@ -155,14 +146,6 @@ img.map, map area {
         cursor: pointer;
     }
 
-    #gitlogoWrap:hover{
-        -webkit-border-radius: 200px;
-        -moz-border-radius: 200px;
-        border-radius: 200px;
-        -webkit-box-shadow: 0px 9px 20px 5px #59cdf4;
-        -moz-box-shadow:    0px 9px 20px 5px #59cdf4;
-        box-shadow:         0px 9px 20px 5px #59cdf4;
-    }
     #activity {
         font-size: 25px;
     }
@@ -170,7 +153,7 @@ img.map, map area {
         font-size: 25px;
     }
     .title2.gittext {
-        font-size: 12.5px;
+        font-size: 13px;
     }
 }
 /*Medium Screens*/
@@ -202,14 +185,6 @@ img.map, map area {
     #gitBottom {
         height: 70%;
     }
-    #gitlogoWrap:hover{
-        -webkit-border-radius:50px;
-        -moz-border-radius: 50px;
-        border-radius: 50px;
-        -webkit-box-shadow: 0px 9px 20px 5px #59cdf4;
-        -moz-box-shadow:    0px 9px 20px 5px #59cdf4;
-        box-shadow:         0px 9px 20px 5px #59cdf4;
-    }
 }
 
 /*Mobile*/
@@ -227,9 +202,6 @@ img.map, map area {
     }
     #gitBottom {
         height: 70%;
-    }
-    #activity {
-        margin-top: 0;
     }
     .lead { /*None js way to cater to mobile users..*/
         display: none;
