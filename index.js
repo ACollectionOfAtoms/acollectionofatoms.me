@@ -168,18 +168,28 @@ gitJSON = function() {
             if (data[i].type in events && events[data[i].type] === 0 && data[i].type === "PushEvent"){
                 pushRepoName = data[i].repo.name;
                 pushRepoUrl = data[i].repo.url;
+                pushRepoUrl = httpURL(pushRepoUrl);
                 pushBranch = data[i].payload.ref;
                 pushBranch = pushBranch.split("/");
                 pushBranch = pushBranch[pushBranch.length - 1];
                 pushMessageName = data[i].payload.before.substring(0,6);
                 pushMessageUrl = data[i].payload.commits[0].url;
+                pushMessageUrl = httpURL(pushMessageUrl)
                 pushMessage = data[i].payload.commits[0].message.substring(0,139)+ "...";
                 events[data[i].type] = 1;
             }else if (data[i].type in events && events[data[i].type] === 0 && data[i].type === "WatchEvent") {
                 starRepoName = data[i].repo.name;
                 starRepoUrl = data[i].repo.url;
+                starRepoUrl = httpURL(starRepoUrl)
                 events[data[i].type] = 1;
             };
         };
     });
+};
+
+httpURL = function(apiurl) {
+    apiurl = apiurl.split("/");
+    apiurl = apiurl.slice(4,apiurl.length);
+    apiurl = "https://github.com/" + apiurl.join("/");
+    return apiurl;
 };
