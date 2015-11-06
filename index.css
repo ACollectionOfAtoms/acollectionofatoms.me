@@ -92,6 +92,10 @@ img.map, map area {
     text-align: center;
 }
 
+#messageText {
+    font-style: italic;
+}
+
 #gitStar {
     height: 50px;
     width: auto;
@@ -153,7 +157,7 @@ img.map, map area {
         font-size: 25px;
     }
     .title2.gittext {
-        font-size: 13px;
+        font-size: 18px;
     }
 }
 /*Medium Screens*/

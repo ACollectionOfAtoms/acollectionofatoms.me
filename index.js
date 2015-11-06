@@ -191,9 +191,9 @@ gitJSON = function() {
                 pushMessageUrl = httpURL(pushMessageUrl)
                 pushMessage = data[i].payload.commits[0].message;
                 if (pushMessage.length > 140) {
-                    pushMessage = pushMessage.substring(0,139) + "...";
+                    pushMessage = '"' + pushMessage.substring(0,139) + "..." + '"';
                 }else{
-                    pushMessage = pushMessage.substring(0,139)
+                    pushMessage = '"' + pushMessage.substring(0,139) + '"';
                 };
                 events[data[i].type] = 1;
             }else if (data[i].type in events && events[data[i].type] === 0 && data[i].type === "WatchEvent") {
