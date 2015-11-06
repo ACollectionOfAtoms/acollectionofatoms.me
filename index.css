@@ -66,7 +66,15 @@ img.map, map area {
 }
 
 #gitlogo {
-    border-radius: 0%;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+.gitTop {
+    height: 50%;
+}
+.gitBottom {
+    height: 50%;
 }
 
 #Git .title2 {
