@@ -143,9 +143,12 @@ clickShow = function(p) {
                                 "-moz-box-shadow":    "",
                                 "box-shadow":         ""})});
             }else{
-                $("#gitlogoWrap").click(function() {
-                    $(this).effect("bounce", {distance: 10, times: 1}, "fast");
-                });
+                logoInterval = setInterval(function () {
+                    $("#gitlogoWrap").effect("bounce", {distance: 10, times: 1}, "slow");
+                }, 3000);
+                setTimeout(function() {
+                    clearInterval(logoInterval);
+                }, 12000)
             };
         };
         if (page === "#Blog"){
