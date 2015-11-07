@@ -129,18 +129,24 @@ clickShow = function(p) {
             $("#starLink").attr("href", starRepoUrl);
             $("#starName").text(starRepoName);
             var logoradius = $("gitlogoWrap").css("border-radius");
-            $("#gitlogoWrap").hover(function() {
-                $(this).css({"-webkit-border-radius":logoradius,
-                            "-moz-border-radius": logoradius,
-                            "border-radius": logoradius,
-                            "-webkit-box-shadow": "0px 9px 20px 5px #59cdf4",
-                            "-moz-box-shadow":    "0px 9px 20px 5px #59cdf4",
-                            "box-shadow":         "0px 9px 20px 5px #59cdf4"});
-                $(this).effect("bounce", {distance: 10, times: 1}, "fast");
-                            },function(){
-                $(this).css({"-webkit-box-shadow": "",
-                            "-moz-box-shadow":    "",
-                            "box-shadow":         ""})});
+            if (iOS != true){
+                $("#gitlogoWrap").hover(function() {
+                    $(this).css({"-webkit-border-radius":logoradius,
+                                "-moz-border-radius": logoradius,
+                                "border-radius": logoradius,
+                                "-webkit-box-shadow": "0px 9px 20px 5px #59cdf4",
+                                "-moz-box-shadow":    "0px 9px 20px 5px #59cdf4",
+                                "box-shadow":         "0px 9px 20px 5px #59cdf4"});
+                    $(this).effect("bounce", {distance: 10, times: 1}, "fast");
+                                },function(){
+                    $(this).css({"-webkit-box-shadow": "",
+                                "-moz-box-shadow":    "",
+                                "box-shadow":         ""})});
+            }else{
+                $("#gitlogoWrap").click(function() {
+                    $(this).effect("bounce", {distance: 10, times: 1}, "fast");
+                });
+            };
         };
         if (page === "#Blog"){
             $(page + " #blogWrapper").css({'overflow-y': 'scroll'});
