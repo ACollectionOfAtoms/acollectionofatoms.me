@@ -111,6 +111,7 @@ html, body, .container-fluid {
     overflow: hidden;
     background-color: black;
     height: 25%;
+    -webkit-overflow-scrolling: touch;
 }
 
 .lead {

@@ -155,7 +155,7 @@ clickShow = function(p) {
             $(page + " #blogWrapper").css({'overflow-y': 'scroll'});
         };
         if (page === "#Projects"){
-                $(page).css({'overflow': 'scroll'});
+                $(page).css({'overflow-y': 'scroll'});
         };
     };
 };
