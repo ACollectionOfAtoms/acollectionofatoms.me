@@ -102,19 +102,62 @@
         </div>
       </div>
 
-      <div class="row page" id="Projects">
+      <div class="row page" id="Projects"> <!-- "window" for page -->
         <div class="col-md-6 pageTop">
           <span class="title"> P r o j e c t s </span>
         </div>
         <div class="col-md-6 pageTop">
           <p class="lead"> The spice of life </p>
         </div>
+        <!-- Partial Template provided by IronSummitMedia/startbootstrap-scrolling-nav on github-->
+        <div class="col-xs-12 title2" id="projContainer"> <!-- "html" for page -->
+          <div id="page-top" class="projBody"> <!--"body" for page-->
 
-        <div class="col-md-6">
-          <h1 class = "title2"> Projects Soon to Come </h1>
-        </div>
-        <div class="col-md-6">
-          <p class="detail"> </p>
+              <!-- About Section -->
+              <section id="intro" class="proj1">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-xs-6">
+                              <h1>imgshare</h1>
+                              <br></br>
+                              <img class="img-responsive" src="./media/islogo.png"/>
+                          </div>
+                          <div class="col-xs-6 projDescript">
+                            <h4>Imgshare is a small OSX gui app created with Python using the imgur API. When a desktop screenshot is taken, it automatically uploads the image to your imgur account and provides a link by either sending it to the clipboard, or storing it for later use. </h4>
+                            <br></br>
+                            <a href="https://github.com/ACollectionOfAtoms/imgshare"><h3>
+                              Find it on Github</h3></a>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+              <section id="intro" class="proj2">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-xs-6">
+                              <h1>EPA Search</h1>
+                              <br></br>
+                              <img class="img-responsive" id="epaimg" src="./media/epaSearch.png"/>
+                          </div>
+                          <div class="col-xs-6 projDescript">
+                            <h4>EPA search is another Python program which used OracleSQL and R, the statistical programming language. Primarily a practice in database creation and use, it allowed for the construction of simple SQL queries in order to visualize the companies with the most EPA violations</h4>
+                            <br></br>
+                            <a href="https://github.com/ACollectionOfAtoms/epa_search"><h3>
+                              Find it on Github</h3></a>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+              <section id="intro" class="proj1">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-xs-6">
+                              <h1>More to come!</h1>
+              </section>
+
+          </div>
         </div>
       </div>
       
@@ -128,13 +171,13 @@
     
     <!--jQuery UI-->
     <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <!--more easings-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <!--Custom Scripts-->
     <script src="index.js"></script>
+    <script src="scrolling-nav.js"></script>
+    
     <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
-    <map name="gitCircle">
-      <area shape="circle" coords="128,128,128" alt="Github"
-      href="https://github.com/ACollectionOfAtoms" target="_blank" hidefocus="true">
-    </map>
 
   </body>
 </html>

@@ -139,20 +139,23 @@ clickShow = function(p) {
                                 "box-shadow":         "0px 9px 20px 5px #59cdf4"});
                     $(this).effect("bounce", {distance: 10, times: 1}, "fast");
                                 },function(){
-                    $(this).css({"-webkit-box-shadow": "",
-                                "-moz-box-shadow":    "",
-                                "box-shadow":         ""})});
+                    $(this).css({"-webkit-box-shadow": "none",
+                                "-moz-box-shadow":    "none",
+                                "box-shadow":         "none"})});
             }else{
                 logoInterval = setInterval(function () {
                     $("#gitlogoWrap").effect("bounce", {distance: 10, times: 1}, "slow");
                 }, 3000);
                 setTimeout(function() {
                     clearInterval(logoInterval);
-                }, 12000)
+                }, 12000) // bounce 3 times
             };
         };
         if (page === "#Blog"){
             $(page + " #blogWrapper").css({'overflow-y': 'scroll'});
+        };
+        if (page === "#Projects"){
+                $(page).css({'overflow': 'scroll'});
         };
     };
 };
@@ -197,7 +200,7 @@ gitJSON = function() {
                 pushBranch = pushBranch[pushBranch.length - 1];
                 pushMessageName = data[i].payload.before.substring(0,6);
                 pushMessageUrl = data[i].payload.commits[0].url;
-                pushMessageUrl = httpURL(pushMessageUrl)
+                pushMessageUrl = httpURL(pushMessageUrl);
                 pushMessage = data[i].payload.commits[0].message;
                 if (pushMessage.length > 140) {
                     pushMessage = '"' + pushMessage.substring(0,139) + "..." + '"';
@@ -208,7 +211,7 @@ gitJSON = function() {
             }else if (data[i].type in events && events[data[i].type] === 0 && data[i].type === "WatchEvent") {
                 starRepoName = data[i].repo.name;
                 starRepoUrl = data[i].repo.url;
-                starRepoUrl = httpURL(starRepoUrl)
+                starRepoUrl = httpURL(starRepoUrl);
                 events[data[i].type] = 1;
             };
         };

@@ -53,10 +53,6 @@ html, body, .container-fluid {
     height: 20%;
 }
 
-img.map, map area {
-    outline: none;
-}
-
 #Git {
     background-image: url("./media/gitbg.png");
     background-repeat: no-repeat;
@@ -68,7 +64,10 @@ img.map, map area {
 #gitlogo {
     width: 100px;
     height:100px;
+    outline: none;
+    border: none;
 }
+
 #gitlogoWrap {
     width: 100px;
     height: 100px;
@@ -109,6 +108,7 @@ img.map, map area {
 }
 
 #Projects {
+    overflow: hidden;
     background-color: black;
     height: 25%;
 }
@@ -215,6 +215,9 @@ img.map, map area {
         max-width: 50%;
         max-height: 50%;
     }
+    h4 {
+        font-size: 14px;
+    }
 }
 
 #Blog {
@@ -287,4 +290,64 @@ img.map, map area {
 
 #branchName {
     font-weight: 900;
+}
+/*-------------------------------------Projects---------------------------*/
+#projContainer{
+    padding: 0;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+
+.proj1 {
+    height: 100%;
+    color: black;
+    text-align: center;
+    background-color: #d6d8d6; 
+}
+
+.proj2 {
+    height: 100%;
+    text-align: center;
+    color: white;
+    background-color: #3b424a;
+}
+
+#projContainer, #page-top {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar-fixed-top-proj {
+    position:fixed;
+    right:0;
+    left:0;
+    z-index:1030;
+}
+
+.scrollTitle {
+    color: black;
+}
+
+.projDescript {
+    text-align: center;
+    padding-top: 10%;
+}
+
+#epaimg {
+    border-radius: 1px;
 }
