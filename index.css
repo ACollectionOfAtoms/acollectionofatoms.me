@@ -338,13 +338,6 @@ of those sections to manage the look and feel of the site. */
     width: 100%;
 }
 
-.navbar-fixed-top-proj {
-    position:fixed;
-    right:0;
-    left:0;
-    z-index:1030;
-}
-
 .scrollTitle {
     color: black;
 }

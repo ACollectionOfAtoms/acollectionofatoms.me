@@ -199,6 +199,8 @@ gitCatReset = function() {  // More or less working properly; seems to jolt up a
     });
 };
 
+
+//UPDATE THIS! IF .JSON HAS NEITHER PUSH OR WATCH EVENTS IT BREAKS EVERYTHING
 gitJSON = function() {
     $.getJSON("https://api.github.com/users/ACollectionOfAtoms/events", function(data){
         var events = {"PushEvent": 0, "WatchEvent": 0}; //Switch used to find first occurence
