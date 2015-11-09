@@ -5,12 +5,9 @@ mobileScroll = function () {
         $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click");
         $(this).show();
     });
-    node = $('html, body, #scrollerFrame').height()*2; // Adjusts scroll speed
-    if (iOS === true) {
-        node = $('html, body, #scrollerFrame').height()/2;
-    };
-    $("html, body, #scrollerFrame").scroll(function() { // This definitely should be refactored
-        if ($(this).scrollTop() < node){   // To be easily extendtable 
+    node = $('body, #scrollerFrame').height()*3; // Adjusts scroll speed
+    $("body, #scrollerFrame").scroll(function() { // This definitely should be refactored
+        if ($(this).scrollTop() < node){            // To be easily extendtable 
             clickExpand($('#Personal'));             
             clickShow($('#Personal'));               
             lastClicked = $('#Personal').attr('id');
