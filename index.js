@@ -18,14 +18,14 @@ if( $('.lead').css('display') === 'none') {
 
 $(window).load(function() {
     $("#loaderOut").fadeOut("slow", function(){$("#loaderOut").remove()});
+    if (mobile === true) {
+        mobileScroll(); 
+    };
 });
 
 $(document).ready( function() {
     cssReset();
     gitJSON();
-    if (mobile === true) {
-        mobileScroll(); 
-    };
     if ( iOS != true) {
         $('.row.page').hover( 
             function() { // Upon entrance
