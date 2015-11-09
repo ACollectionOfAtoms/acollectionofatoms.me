@@ -1,5 +1,5 @@
 mobileScroll = function () {
-    $('#scrollerFrame').css({"overflow-y": "scroll"});
+    $('#scrollerFrame').css("overflow-y": "scroll");
     $('#scrollerFrame').click(function (e) {
         $(this).hide();
         $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click");
@@ -7,7 +7,6 @@ mobileScroll = function () {
     });
     console.log("running");
     node = $(document).height() / 4; // Four pages, so divide total hieght by 4
-    $("#scrollerFrame").css({"overflow" : "scroll"});
     $("#scrollerFrame").scroll(function() { // This definitely should be refactored
         console.log($(this).scrollTop());   // To be easily extendtable 
         if ($(this).scrollTop() < node){
