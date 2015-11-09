@@ -1,5 +1,5 @@
 mobileScroll = function () {
-    $('#scrollerFrame').css("overflow-y": "scroll");
+    $('#scrollerFrame').css({"overflow-y": "scroll"});
     $('#scrollerFrame').click(function (e) {
         $(this).hide();
         $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click");
