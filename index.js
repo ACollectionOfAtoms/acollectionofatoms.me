@@ -11,8 +11,7 @@ iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 mobile = false;
 
 if( $('.lead').css('display') === 'none') {
-    mobile = true;
-    mobileScroll();       
+    mobile = true;      
 }else{
     $("#scrollerFrame").remove();
 };
@@ -24,6 +23,9 @@ $(window).load(function() {
 $(document).ready( function() {
     cssReset();
     gitJSON();
+    if (mobile === true) {
+        mobileScroll(); 
+    };
     if ( iOS != true) {
         $('.row.page').hover( 
             function() { // Upon entrance
