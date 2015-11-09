@@ -6,7 +6,7 @@ mobileScroll = function () {
         $(this).show();
     });
     console.log("running");
-    node = $(document).height() / 4; // Four pages, so divide total hieght by 4
+    node = $('#scrollerFrame').height() / 4; // Four pages, so divide total hieght by 4
     $("#scrollerFrame").scroll(function() { // This definitely should be refactored
         console.log($(this).scrollTop());   // To be easily extendtable 
         if ($(this).scrollTop() < node){ 
