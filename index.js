@@ -12,7 +12,7 @@ mobile = false;
 
 if( $('.lead').css('display') === 'none') {
     mobile = true;
-    //mobileScroll();       
+    mobileScroll();       
 }else{
     $("#scrollerFrame").remove();
 };
@@ -98,6 +98,8 @@ clickExpand = function(p) { //Similar to hoverExpand; octocat is exception
                     };
                 },
                 3000);
+        }else if (page === "#Blog" || page === "#Projects") {
+            $(page).css({"z-index": "3000"});
         };
     };
 };
@@ -173,7 +175,8 @@ cssReset = function() { // Used to reset to intial css, hiding details and image
     $(".row.page").css({"cursor": "",
                    "border": "",
                    "opacity" : "",
-                   "overflow": ""});
+                   "overflow": "",
+                   "z-index": ""});
     $("#Blog #blogWrapper").css({"overflow-y": "hidden"}); // <- Resetting .row.page doesn't 
     $(".detail").hide();                                   // work, so this is req. Why?!
     $("#iframeContent").hide("slow");

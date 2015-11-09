@@ -9,6 +9,7 @@ html, body, .container-fluid {
     max-height: 91%;
     -webkit-transition: height 0.5s, opacity 0.5s;
     cursor: pointer;
+    position: relative;
     overflow: hidden;
 }
 
@@ -233,18 +234,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101014', end
 }
 
 #iframeContent {
-    width: 90%;
-    height: 99.1%;
+    width: 100%;
+    height: 100%;
     border: none;
 }
 
 #blogWrapper {
     text-align: center;
     height: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    width: 100%;
+    padding: 0;
     -webkit-overflow-scrolling: touch;
     overflow-y: hidden;
 }
@@ -360,7 +359,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 #scroller {    
-    height: 200%;
+    height: 250%;
     width: 100%;
     background-color: #3b424a;
 }
