@@ -7,7 +7,7 @@ mobileScroll = function () {
     });
     node = $('body, #scrollerFrame').height()*3; // Adjusts scroll speed
     if ($.browser.chrome) {
-        node = node*3;
+        node = node / 4;
     };
     $('body, #scrollerFrame').scroll(function() { // This definitely should be refactored
         if ($(this).scrollTop() < node){            // To be easily extendtable 
