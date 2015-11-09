@@ -109,9 +109,16 @@ html, body, .container-fluid {
 
 #Projects {
     overflow: hidden;
-    background-color: black;
     height: 25%;
     -webkit-overflow-scrolling: touch;
+background: rgba(16,16,20,1);
+background: -moz-linear-gradient(left, rgba(16,16,20,1) 10%, rgba(16,16,20,1) 54%, rgba(16,16,20,1) 69%, rgba(7,10,13,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(10%, rgba(16,16,20,1)), color-stop(54%, rgba(16,16,20,1)), color-stop(69%, rgba(16,16,20,1)), color-stop(100%, rgba(7,10,13,1)));
+background: -webkit-linear-gradient(left, rgba(16,16,20,1) 10%, rgba(16,16,20,1) 54%, rgba(16,16,20,1) 69%, rgba(7,10,13,1) 100%);
+background: -o-linear-gradient(left, rgba(16,16,20,1) 10%, rgba(16,16,20,1) 54%, rgba(16,16,20,1) 69%, rgba(7,10,13,1) 100%);
+background: -ms-linear-gradient(left, rgba(16,16,20,1) 10%, rgba(16,16,20,1) 54%, rgba(16,16,20,1) 69%, rgba(7,10,13,1) 100%);
+background: linear-gradient(to right, rgba(16,16,20,1) 10%, rgba(16,16,20,1) 54%, rgba(16,16,20,1) 69%, rgba(7,10,13,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101014', endColorstr='#070a0d', GradientType=1 );
 }
 
 .lead {
@@ -262,7 +269,6 @@ html, body, .container-fluid {
     -webkit-animation: loadingBG 30s ease infinite;
     -moz-animation: loadingBG 30s ease infinite;
     animation: loadingBG 30s ease infinite;
-
 }
 
 #loaderIn {
@@ -351,4 +357,22 @@ of those sections to manage the look and feel of the site. */
 
 #epaimg {
     border-radius: 1px;
+}
+
+#scroller {    
+    height: 200%;
+    width: 100%;
+    background-color: #3b424a;
+}
+
+#scrollerFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2000;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    opacity: 0.1;
 }

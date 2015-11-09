@@ -1,15 +1,30 @@
-loadScroll = function() {
-    $("#Projects").scroll(function() {
-        introPos = $("#intro").offset().top;
-        aboutPos = $("#about").offset().top;
-        servPos = $("#services").offset().top;
-        contPos = $("#contact").offset().top;
-        topPos = $("#Projects").offset().top;
-        pageSize = Math.abs(introPos - aboutPos);
-
-        $("#intro .scrollTitle").css({"opacity" : (700 + introPos)/$("#Projects").offset().top});
-        $("#about .scrollTitle").css({"opacity" : (700 + aboutPos)/$("#Projects").offset().top});
-        $("#services .scrollTitle").css({"opacity" : (700 + servPos)/$("#Projects").offset().top});
-        $("#contact .scrollTitle").css({"opacity": (700 + contPos)/$("#Projects").offset().top});
+mobileScroll = function () {
+    $('#scrollerFrame').click(function (e) {
+        $(this).hide();
+        $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click");
+        $(this).show();
+    });
+    console.log("running");
+    node = $(document).height() / 4; // Four pages, so divide total hieght by 4
+    $("#scrollerFrame").css({"overflow" : "scroll"});
+    $("#scrollerFrame").scroll(function() { // This definitely should be refactored
+        console.log($(this).scrollTop());   // To be easily extendtable 
+        if ($(this).scrollTop() < node){
+            clickExpand($('#Personal'));             
+            clickShow($('#Personal'));               
+            lastClicked = $('#Personal').attr('id');
+        } else if ($(this).scrollTop() < node*2) {
+            clickExpand($('#Git'));             
+            clickShow($('#Git'));               
+            lastClicked = $('#Git').attr('id');
+        }else if ($(this).scrollTop() < node*3) {
+            clickExpand($('#Blog'));             
+            clickShow($('#Blog'));               
+            lastClicked = $('#Blog').attr('id');
+        }else if ($(this).scrollTop() < node*4) {
+            clickExpand($('#Projects'));             
+            clickShow($('#Projects'));               
+            lastClicked = $('#Projects').attr('id');
+        };
     });
 };

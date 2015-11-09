@@ -11,7 +11,8 @@ iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 mobile = false;
 
 if( $('.lead').css('display') === 'none') {
-    mobile = true;       
+    mobile = true;
+    mobileScroll();       
 };
 
 $(window).load(function() {
@@ -157,6 +158,12 @@ clickShow = function(p) {
         if (page === "#Projects"){
                 $(page).css({'overflow-y': 'scroll'});
         };
+        if (page === "#Personal" && iOS != true) {
+            //$(".contact-logo").hover( function() {
+            //    $(this).effect("bounce", {distance: 1, times: 1}, "fast");
+            //},
+            //function(){});
+        };
     };
 };
 
@@ -198,7 +205,7 @@ gitJSON = function() {
                 pushBranch = data[i].payload.ref;
                 pushBranch = pushBranch.split("/");
                 pushBranch = pushBranch[pushBranch.length - 1];
-                pushMessageName = data[i].payload.before.substring(0,6);
+                pushMessageName = data[i].payload.head.substring(0,6);
                 pushMessageUrl = data[i].payload.commits[0].url;
                 pushMessageUrl = httpURL(pushMessageUrl);
                 pushMessage = data[i].payload.commits[0].message;

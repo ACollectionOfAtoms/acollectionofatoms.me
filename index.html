@@ -20,8 +20,17 @@
   </head>
 
   <body>
-    <div id="loaderOut"> <div id="loaderIn"><h1 id="elip">loading<h1> </div></div>
+    <div id="loaderOut"> 
+      <div id="loaderIn">
+        <h1 id="elip">loading<h1> 
+      </div>
+    </div>
+    
+    <div id="scrollerFrame">
+      <div id="scroller"></div>
+    </div>
     <div class="container-fluid">
+
       <div class="row page" id="Personal">
         <div class="col-xs-6 pageTop">
           <span class="title"> P e r s o n a l </span>
@@ -33,15 +42,13 @@
           <h1 class="title2"> Hello </h1>
           <img src="./media/self.jpg" class="img-responsive" id="self"/>
         </div>
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-xs-12 col-sm-6 title2">
           <h3 class="detail"> The Pleasure is All Mine </h3>
-          <h4 class="detail">  
-            <br>
-            <a href="mailto:hernandezdavid88@utexas.edu" target="_blank"><img class="contact-logo" src="./media/mail-logo.png"></img></a>
+            
+            <a href="mailto:hernandezdavid88@utexas.edu" target="_blank"><img id="mail" class="contact-logo" src="./media/mail-logo.png"></img></a>
             <a href="https://www.linkedin.com/in/hernandezdavidus" target="_blank"><img class="contact-logo" src="./media/in-logo.png"></img></a>
             <a href="https://twitter.com/Atom_Hernandez" target="_blank"><img class="contact-logo" src="./media/twit-logo.png"></img></a>
-            </br>
-          </h4>
+
         </div>
       </div>
 
@@ -174,8 +181,9 @@
     <!--more easings-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <!--Custom Scripts-->
-    <script src="index.js"></script>
     <script src="scrolling-nav.js"></script>
+    <script src="index.js"></script>
+    
     
     <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
 
