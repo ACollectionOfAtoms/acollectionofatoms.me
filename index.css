@@ -372,7 +372,7 @@ of those sections to manage the look and feel of the site. */
     height: 100%;
     width: 100%;
     z-index: 2000;
-    -webkit-overflow-scrolling: touch;
-    overflow: hidden;
     opacity: 0.1;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
 }

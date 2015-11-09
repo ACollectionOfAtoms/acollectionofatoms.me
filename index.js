@@ -13,6 +13,8 @@ mobile = false;
 if( $('.lead').css('display') === 'none') {
     mobile = true;
     mobileScroll();       
+}else{
+    $("#scrollerFrame").remove();
 };
 
 $(window).load(function() {
