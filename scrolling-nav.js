@@ -5,11 +5,8 @@ mobileScroll = function () {
         $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click");
         $(this).show();
     });
-    node = $('body, #scrollerFrame').height()*3; // Adjusts scroll speed
-    if ($.browser.chrome) {
-        node = node / 4;
-    };
-    $('body, #scrollerFrame').scroll(function() { // This definitely should be refactored
+    node = $('body #scrollerFrame').height()*2.5; // Adjusts scroll speed
+    $('body #scrollerFrame').scroll(function() { // This definitely should be refactored
         if ($(this).scrollTop() < node){            // To be easily extendtable 
             clickExpand($('#Personal'));             
             clickShow($('#Personal'));               
