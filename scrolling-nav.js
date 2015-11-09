@@ -6,7 +6,7 @@ mobileScroll = function () {
         $(this).show();
     });
     node = $('body, #scrollerFrame').height()*3; // Adjusts scroll speed
-    if (iOS === true) {
+    if ($.browser.chrome) {
         node = node*3;
     };
     $('body, #scrollerFrame').scroll(function() { // This definitely should be refactored
