@@ -12,7 +12,7 @@ mobile = false;
 
 if( $('.lead').css('display') === 'none') {
     mobile = true;
-    mobileScroll();       
+    //mobileScroll();       
 }else{
     $("#scrollerFrame").remove();
 };
