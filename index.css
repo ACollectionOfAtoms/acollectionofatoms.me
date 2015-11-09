@@ -1,4 +1,8 @@
-html, body, .container-fluid {
+html {
+    background-color: black;
+    height: 100%;
+}
+body, .container-fluid {
     background-color: black;
     height: 100%;
     overflow: hidden;
