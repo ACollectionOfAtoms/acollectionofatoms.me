@@ -6,6 +6,9 @@ mobileScroll = function () {
         $(this).show();
     });
     node = $('html, body, #scrollerFrame').height()*2; // Adjusts scroll speed
+    if (iOS === true) {
+        node = $('html, body, #scrollerFrame').height()/2;
+    };
     $("html, body, #scrollerFrame").scroll(function() { // This definitely should be refactored
         if ($(this).scrollTop() < node){   // To be easily extendtable 
             clickExpand($('#Personal'));             
