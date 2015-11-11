@@ -372,3 +372,7 @@ of those sections to manage the look and feel of the site. */
     -webkit-overflow-scrolling: touch;
     overflow-y: hidden;
 }
+
+.title {
+    font-size: 20px;
+}

@@ -5,7 +5,7 @@ mobileScroll = function () {
         $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click");
         $(this).show();
     });
-    node = $('body #scrollerFrame').height()*2.75; // Adjusts scroll speed
+    node = $('body #scrollerFrame').height()*2.8; // Adjusts scroll speed
     if ($.browser.chrome) {
         node = $('body #scrollerFrame'.height()*8);
     }
