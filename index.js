@@ -7,20 +7,20 @@ pages = [
 
 var lastClicked;    // Know where the cursor is
 var lastPage;       // at all times!
-iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;   
+iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 mobile = false;
 
 if( $('.lead').css('display') === 'none') {
-    mobile = true;      
+    mobile = true;
 }else{
     $("#scrollerFrame").remove();
-};
+}
 
 $(window).load(function() {
-    $("#loaderOut").fadeOut("slow", function(){$("#loaderOut").remove()});
+    $("#loaderOut").fadeOut("slow", function() {$("#loaderOut").remove()});
     if (mobile === true) {
         mobileScroll(); 
-    };
+    }
 });
 
 $(document).ready( function() {
@@ -120,7 +120,7 @@ clickShow = function(p) {
         };
         if (lastClicked === "Git") {
             gitCatReset();
-        }else if (page === "#Git") {
+        }else if (page === "#Git" && typeof pushBranch != "undefined") {
             $(page)
                 .css({'background-image': 'none'})
                 .css({'background-color': 'white'})
@@ -133,9 +133,42 @@ clickShow = function(p) {
             $("#messageNameUrl").attr("href", pushMessageUrl);
             $("#messageNameText").text(pushMessageName);
             $("#messageText").text(pushMessage);
-            $("#starLink").attr("href", starRepoUrl);
-            $("#starName").text(starRepoName);
+            if (typeof starRepoUrl != "undefined") {
+                $("#starLink").attr("href", starRepoUrl);
+                $("#starName").text(starRepoName);
+            } else {
+                $("#starred.title2.gittext").text("No recent stars!");
+            }
             var logoradius = $("gitlogoWrap").css("border-radius");
+            if (iOS != true){
+                $("#gitlogoWrap").hover(function() {
+                    $(this).css({"-webkit-border-radius":logoradius,
+                                "-moz-border-radius": logoradius,
+                                "border-radius": logoradius,
+                                "-webkit-box-shadow": "0px 9px 20px 5px #59cdf4",
+                                "-moz-box-shadow":    "0px 9px 20px 5px #59cdf4",
+                                "box-shadow":         "0px 9px 20px 5px #59cdf4"});
+                    $(this).effect("bounce", {distance: 10, times: 1}, "fast");
+                                },function(){
+                    $(this).css({"-webkit-box-shadow": "none",
+                                "-moz-box-shadow":    "none",
+                                "box-shadow":         "none"})});
+            } else {
+                logoInterval = setInterval(function () {
+                    $("#gitlogoWrap").effect("bounce", {distance: 10, times: 1}, "slow");
+                }, 3000);
+                setTimeout(function() {
+                    clearInterval(logoInterval);
+                }, 12000) // bounce 3 times
+            };
+        }else if (page === "#Git") { // :( so much recfactoring needed in this script
+            $(page)
+                .css({'background-image': 'none'})
+                .css({'background-color': 'white'})
+                .css({'background-image': 'url("./media/contri.png")',
+                      'background-size' : '100%'});
+            $(".gittext").text("");
+            $("#activity").text("No current activity!");
             if (iOS != true){
                 $("#gitlogoWrap").hover(function() {
                     $(this).css({"-webkit-border-radius":logoradius,
@@ -201,8 +234,6 @@ gitCatReset = function() {  // More or less working properly; seems to jolt up a
     });
 };
 
-
-//UPDATE THIS! IF .JSON HAS NEITHER PUSH OR WATCH EVENTS IT BREAKS EVERYTHING
 gitJSON = function() {
     $.getJSON("https://api.github.com/users/ACollectionOfAtoms/events", function(data){
         var events = {"PushEvent": 0, "WatchEvent": 0}; //Switch used to find first occurence
@@ -222,15 +253,15 @@ gitJSON = function() {
                     pushMessage = '"' + pushMessage.substring(0,139) + "..." + '"';
                 }else{
                     pushMessage = '"' + pushMessage.substring(0,139) + '"';
-                };
+                }
                 events[data[i].type] = 1;
             }else if (data[i].type in events && events[data[i].type] === 0 && data[i].type === "WatchEvent") {
                 starRepoName = data[i].repo.name;
                 starRepoUrl = data[i].repo.url;
                 starRepoUrl = httpURL(starRepoUrl);
                 events[data[i].type] = 1;
-            };
-        };
+            }
+        }
     });
 };
 
