@@ -7,189 +7,63 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="A personal website created by a collection of atoms">
     <meta name="author" content="David Adam Hernandez">
-    <link rel="icon" href="./media/acoa_icon.ico">
+    <link rel="icon" href="/media/acoa_icon.ico">
 
     <title>A Collection Of Atoms</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet">
 
     <!--Where the css is-->
-    <link href="index.css" rel="stylesheet">
+    <link href="./static/css/index.css" rel="stylesheet">
 
   </head>
 
   <body>
-    <div id="loaderOut"> 
-      <div id="loaderIn">
-        <h1 id="elip">loading<h1> 
-      </div>
-    </div>
-    
-    
-    <div id="scrollerFrame">
-      <div id="scroller"></div>
-    </div>
-
-    <div class="container-fluid">
-
-      <div class="row page" id="Personal">
-        <div class="col-xs-6 pageTop">
-          <span class="title"> P e r s o n a l </span>
-        </div>
-        <div class="col-xs-6 pageTop">
-          <p class="lead"> Howdy </p>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <h1 class="title2"> Hello </h1>
-          <img src="./media/self.jpg" class="img-responsive" id="self"/>
-        </div>
-        <div class="col-xs-12 col-sm-6 title2">
-          <h3 class="detail"> The Pleasure is All Mine </h3>
-            
-            <a href="mailto:hernandezdavid88@utexas.edu" target="_blank"><img id="mail" class="contact-logo" src="./media/mail-logo.png"></img></a>
-            <a href="https://www.linkedin.com/in/hernandezdavidus" target="_blank"><img class="contact-logo" src="./media/in-logo.png"></img></a>
-            <a href="https://twitter.com/Atom_Hernandez" target="_blank"><img class="contact-logo" src="./media/twit-logo.png"></img></a>
-
-        </div>
-      </div>
-
-      <div class="row page" id="Git">
-        <div class="col-md-6 pageTop">
-          <span class="title"> G i t </span>
-        </div>
-        <div class="col-md-6 pageTop">
-          <p class="lead"> Wonderful Version Control </p>
-        </div>
-        <div class="col-xs-12 col-md-6" id="gitTop">
-          <h4 class = "title2" id="follow"> Follow me on Github! </h4> 
-          <div id="gitlogoWrap"><a href="https://github.com/ACollectionOfAtoms" target="_blank">
-            <img src="./media/gitlogo.png" class="img-responsive" id="gitlogo"></a>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6" id="gitBottom">
-          <h3 class="title2" id="activity">Latest Activity </h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
           <div class="row">
-            <div class="col-xs-6 col-md-12" id="push">
-              <h4 class="title2 gittext"> Pushed to 
-                  <span id="branchName"></span> at 
-                <a id="repoLink" target="_blank">
-                  <span id="repoText"></span>
-                </a>
-              </h4>
-              <h5 class="title2 gittext">
-                <a href="" id="messageNameUrl" target="_blank">
-                  <span id="messageNameText"></span>
-                </a>
-                <span id="messageText"></span>
-              </h5>
+            <div class="col-xs-12">
+              <h1 class="title"> acollectionofatoms.me  </h1>
+              <br>
+              <br>
+              <h1>is a "website"</h1>
+              <br>
+              <br>
+              <div>
+                <h3> created by Adam Hernandez </h3>
+                <br>
+                <br>
+              </div>
             </div>
-
-            <div class="col-xs-6 col-md-12" id="starred">
-              <h4 class="title2 gittext"> Starred 
-                <a id="starLink" href="">
-                  <span id="starName"></span>
-                </a>
-              </h4>
-              <img id="gitStar" class="img-responsive" src="./media/gitstar.png"/>
+            <div class="col-xs-12">
+              <h3 class="detail">He's exceedingly reachable</h3>
+              <br>
+              <br>
+              <div class="row">
+                <div class="col-xs-4 col-sm-1">
+                  <a href="mailto:hernandezdavid88@utexas.edu" target="_blank"><img id="mail" class="contact-logo" src="./media/mail-logo.png"></img></a>
+                </div>
+                <div class="col-xs-4 col-sm-1">
+                  <a href="https://www.linkedin.com/in/hernandezdavidus" target="_blank"><img class="contact-logo" src="./media/in-logo.png"></img></a>
+                </div>
+                <div class="col-xs-4 col-sm-1">
+                  <a href="https://twitter.com/Atom_Hernandez" target="_blank"><img class="contact-logo" src="./media/twit-logo.png"></img></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="row page" id="Blog">
-        <div class="col-md-6 pageTop">
-          <span class="title"> B l o g </span>
-        </div>
-        <div class="col-md-6 pageTop">
-          <p class="lead"> It's a blog eat blog world </p>
-        </div>
-
-        <div id="blogWrapper" class="col-xs-12">
-          <iframe id="iframeContent" src="http://acoatypes.blogspot.com/?view=classic">
-          </iframe>
-        </div>
-      </div>
-
-      <div class="row page" id="Projects"> <!-- "window" for page -->
-        <div class="col-md-6 pageTop">
-          <span class="title"> P r o j e c t s </span>
-        </div>
-        <div class="col-md-6 pageTop">
-          <p class="lead"> The spice of life </p>
-        </div>
-        <!-- Partial Template provided by IronSummitMedia/startbootstrap-scrolling-nav on github-->
-        <div class="col-xs-12 title2" id="projContainer"> <!-- "html" for page -->
-          <div id="page-top" class="projBody"> <!--"body" for page-->
-
-              <!-- About Section -->
-              <section id="intro" class="proj1">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-xs-6">
-                              <h1>imgshare</h1>
-                              <br></br>
-                              <img class="img-responsive" src="./media/islogo.png"/>
-                          </div>
-                          <div class="col-xs-6 projDescript">
-                            <h4>Imgshare is a small OSX gui app created with Python using the imgur API. When a desktop screenshot is taken, it automatically uploads the image to your imgur account and provides a link by either sending it to the clipboard, or storing it for later use. </h4>
-                            <br></br>
-                            <a href="https://github.com/ACollectionOfAtoms/imgshare"><h3>
-                              Find it on Github</h3></a>
-                          </div>
-                      </div>
-                  </div>
-              </section>
-
-              <section id="intro" class="proj2">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-xs-6">
-                              <h1>EPA Search</h1>
-                              <br></br>
-                              <img class="img-responsive" id="epaimg" src="./media/epaSearch.png"/>
-                          </div>
-                          <div class="col-xs-6 projDescript">
-                            <h4>EPA search is another Python program which used OracleSQL and R, the statistical programming language. Primarily a practice in database creation and use, it allowed for the construction of simple SQL queries in order to visualize the companies with the most EPA violations</h4>
-                            <br></br>
-                            <a href="https://github.com/ACollectionOfAtoms/epa_search"><h3>
-                              Find it on Github</h3></a>
-                          </div>
-                      </div>
-                  </div>
-              </section>
-
-              <section id="intro" class="proj1">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-xs-6">
-                              <h1>More to come!</h1>
-              </section>
-
-          </div>
-        </div>
-      </div>
-      
     </div>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    
-    <!--jQuery UI-->
-    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
-    <!--more easings-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <!--Custom Scripts-->
-    <script src="scrolling-nav.js"></script>
-    <script src="index.js"></script>
-    
-    <!--Browser Detection-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.0.8/jquery.browser.js"></script>
-    
-    <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+    <script src="./static/js/jquery.min.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
 
+    <!--jQuery UI-->
   </body>
 </html>
