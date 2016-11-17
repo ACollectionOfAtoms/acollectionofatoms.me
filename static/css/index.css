@@ -1,12 +1,20 @@
 .contact-logo {
   max-width: 100%;
-  max-height: 50px;
+  max-height: 5vh;
+  margin: 1em;
 }
-
-#self {
-  max-width: 50%;
-  max-height: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5%;
+.container {
+  max-width: 100vw;
+  height: 100vh;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+@media only screen and (max-width: 767px) {
+   h1 {
+      font-size: 1.5em;
+   }
+   h3 {
+      font-size: 1em;
+   }
 }
