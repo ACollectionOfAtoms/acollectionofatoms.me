@@ -2,12 +2,16 @@
   padding: 1em;
 }
 
+.hero-footer {
+  text-align: center;
+}
+
 .bold {
   font-weight: 500 !important;
 }
 
 .page-link:hover {
-  color: #00d1b2;
+  color: #87d2d4;
 }
 
 /* over-ride bulma */
@@ -17,4 +21,11 @@
 
 .periphery-text {
   padding: 1em;
+}
+.hero.is-dark, .hero-footer {
+  background-color: transparent;
+}
+body {
+  background-color: #436560;
+
 }
