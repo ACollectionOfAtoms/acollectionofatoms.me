@@ -14,3 +14,7 @@
 .subtitle a:hover, .title a:hover {
   border-bottom: 0;
 }
+
+.periphery-text {
+  padding: 1em;
+}
