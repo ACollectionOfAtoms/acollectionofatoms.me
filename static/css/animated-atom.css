@@ -1,0 +1,126 @@
+@keyframes spin {
+	from {
+		transform: rotate(0turn)
+	}
+	to {
+		transform: rotate(1turn)
+	}
+}
+
+@keyframes alternateSpin {
+	from {
+		transform: rotate(1turn)
+	}
+	to {
+		transform: rotate(0turn)
+	}
+}
+
+.atom {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.atom__path {
+	animation: spin 2s infinite linear;
+}
+  
+.atom__proton {
+  width: 30px; 
+  height: 30px;
+  padding: 2px;
+	margin: 10px auto;
+  border-radius: 50%;
+  border: 1px solid #ebe6e3;
+	background: #ebe6e3;
+}
+
+.atom__path {
+  width: 80px;
+  height: 80px;
+	padding: 2px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #ebe6e3;
+  background: transparent;
+  transition: 0.2s linear all;
+}
+
+.atom__electron {
+  height: 12px;
+  width: 12px;
+  margin-top: 10%;
+  border-radius: 50%;
+  background-color: #ebe6e3;
+  border: 1px solid #ebe6e3;
+}
+
+/* .atom:hover {
+  border-right: 4px solid black;
+}
+ */
+.atom:hover .atom__proton,
+.atom:hover .atom__electron {
+  background-color:rgba(176, 212, 214, 1);
+  border: 1px solid black;
+}
+
+.atom:hover .atom__electron {
+  margin-top: 0;
+}
+
+.atom:hover .atom__path {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+}
+/* List modifiers  */
+.atom_list:hover {
+  border-right: none;
+}
+
+.contact-info-aside__list-item:hover atom__proton_list,
+.contact-info-aside__list-item:hover .atom__electron_list {
+  background-color:rgba(176, 212, 214, 1);
+}
+
+.contact-info-aside__list-item:hover .atom__electron_list {
+  margin-top: 89%;
+  height: 4px;
+  width: 4px;
+  border: 1px solid black;
+}
+
+.contact-info-aside__list-item:hover .atom__path_list {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+
+.contact-info-aside__list-item:hover .atom__proton_list {
+  border: 1px solid black;
+  background-color:rgba(176, 212, 214, 1);
+}
+
+.atom__proton_list {
+  width: 4px; 
+  height: 4px;
+  border: none;
+  background-color: #ebe6e3;
+}
+
+.atom__path_list {
+  width: 0px;
+  height: 0px;
+  animation: alternateSpin 1.5s infinite linear;
+  transition: 0.3s linear all;
+}
+
+.atom__electron_list {
+  height: 0px;
+  width: 0px;
+  border: none;
+  background-color: black;
+}

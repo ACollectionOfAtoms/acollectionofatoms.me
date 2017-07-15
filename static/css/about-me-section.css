@@ -1,0 +1,17 @@
+.about-me-section {
+  flex: 5 0 0;
+  order: 1;
+  padding: 0 1em;
+  margin: 0 10%;
+  max-height: 80%;
+  overflow-y: scroll;
+}
+
+.about-me-section__header {
+  font-size: 4em;
+  text-align: center;
+}
+
+.about-me-section__text {
+  font-size: 3.5em;
+}
