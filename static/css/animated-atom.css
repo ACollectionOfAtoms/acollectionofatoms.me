@@ -84,7 +84,9 @@
 
 /* List modifiers  */
 .atom_list {
-  display: flex;
+  height: 100%;
+  width: 100%;
+  align-self: center;
 }
 
 .contact-info-aside__list-item:hover .atom__proton_list,
@@ -115,7 +117,7 @@
   height: 8px;
   background-color: #ebe6e3;
   top: calc(50% - 5px);
-  left: calc(50% - 4.5px);
+  left: calc(50% - 5px);
 }
 
 .atom__path_list {

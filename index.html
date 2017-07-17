@@ -20,11 +20,11 @@ Made By A Collection of
 
     <title>A Collection Of Atoms</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="./static/css/build/index.css" rel="stylesheet">
-    <link href="./static/css/build/contact-info-aside.css" rel="stylesheet">
-    <link href="./static/css/build/about-me-section.css" rel="stylesheet">
-    <link href="./static/css/build/animated-atom.css" rel="stylesheet">
-    <link href="./static/css/build/tooltip.css" rel="stylesheet">
+    <link href="./static/css/index.css" rel="stylesheet">
+    <link href="./static/css/contact-info-aside.css" rel="stylesheet">
+    <link href="./static/css/about-me-section.css" rel="stylesheet">
+    <link href="./static/css/animated-atom.css" rel="stylesheet">
+    <link href="./static/css/tooltip.css" rel="stylesheet">
   </head>
   <body>
     <header class='header'>
@@ -32,7 +32,7 @@ Made By A Collection of
         ?
       </div>
       <div id='js-meaningless-tool-tip' class='tool-tip tool-tip_meaningless draw'>
-        <p> This is a <a class='dotted-link' href='https://en.wikipedia.org/wiki/Meaning_(existential)'>meaningless</a> circle. </p>
+        <p> This is a <a class='dotted-link' target='_blank' href='https://en.wikipedia.org/wiki/Meaning_(existential)'>meaningless</a> circle. </p>
         <button class='meaningless-button'>
           OK
         </button>
@@ -40,6 +40,7 @@ Made By A Collection of
     </header>
     <main id='main'>
      <aside class='contact-info-aside'>
+       <a name='contact'></a>
        <span class='contact-info-aside__header black-on-hover'></span>
        <ul class='contact-info-aside__list'>
          <li class='contact-info-aside__list-item' data-fa-icon-classes='fa fa-github'>
@@ -120,9 +121,12 @@ Made By A Collection of
         Hello Traveller
       </header>
       <p class='about-me-section__text'> This is a <a class='dotted-link' href='https://en.wikipedia.org/wiki/Website'> website</a>
-       created by <span class='subdued-text'> David</span> <a class='dotted-link' href='https://en.wikipedia.org/wiki/Adam_(given_name)'> Adam</a> Hernandez. </p>
-      <p class='about-me-section__text'> He is a <a href='https://en.wikipedia.org/wiki/Software_engineer' class='dotted-link'>software engineer</a> 
-        living in <a href='https://en.wikipedia.org/wiki/New_York_City'class='dotted-link'> New York City.</a></p>
+       created by <span class='subdued-text'> David</span> <a class='dotted-link' href='https://en.wikipedia.org/wiki/Adam_(given_name)'> Adam</a> Hernandez (No one calls him <span class='subdued-text'> David</span>). </p>
+      <p class='about-me-section__text'>This collection of atoms obtained a B.S in<a href='https://en.wikipedia.org/wiki/Bioinformatics' target='_blank' class='dotted-link'> Biochemistry-Computation</a> from the esteemed <a href='https://www.utexas.edu/' target='_blank' class='dotted-link'>University of Texas at Austin</a>.</p>
+      <p class='about-me-section__text'> Nowadays he is only using the computation side of his degree as a <a href='https://en.wikipedia.org/wiki/Software_engineer' class='dotted-link'>software engineer</a> 
+        living in <a href='https://en.wikipedia.org/wiki/New_York_City'class='dotted-link'> New York City</a> (Such a lovely place!).</p>
+
+      <p class='about-me-section__text'>If you'd like talk shop, feel free to <a class='dotted-link' href='#contact'>contact</a> him.</p>
      </section>
     </main>
     <footer class='footer'>

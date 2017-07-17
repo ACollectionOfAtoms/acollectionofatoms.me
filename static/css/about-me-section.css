@@ -1,8 +1,12 @@
 .about-me-section {
   flex: 5 0 0;
   order: 1;
-  padding: 0 1em;
-  margin: 0 5%;
+  padding: 1em;
+  margin: 5%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .about-me-section__header {
