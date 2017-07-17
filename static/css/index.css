@@ -34,9 +34,10 @@ body {
 }
 
 .header {
-  text-align: right;
+  text-align: center;
   word-spacing: 0.5em;
   font-size: 3em;
+  padding-top: 0.5em;
   padding-bottom: 1em;
   cursor: default;
   color: #ebe6e3;
