@@ -17,31 +17,40 @@
 }
 
 .atom {
-  flex: 3;
+-webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 } 
 
 .atom__path {
 	animation: spin 2s infinite linear;
 }
-  
+
 .atom__proton {
+  position: absolute;
+  top: calc(50% - 16px);
+  left: calc(50% - 16px);
+  display: block;
   width: 30px; 
   height: 30px;
-  padding: 2px;
-	margin: 10px auto;
   border-radius: 50%;
   border: 1px solid #ebe6e3;
-	background: #ebe6e3;
+  background: #ebe6e3;
 }
 
 .atom__path {
   width: 80px;
   height: 80px;
-	padding: 2px;
-  position: absolute;
   border-radius: 50%;
   border: 1px solid #ebe6e3;
   background: transparent;
@@ -51,16 +60,12 @@
 .atom__electron {
   height: 12px;
   width: 12px;
-  margin-top: 10%;
+  margin-top: 12%;
   border-radius: 50%;
   background-color: #ebe6e3;
   border: 1px solid #ebe6e3;
 }
 
-/* .atom:hover {
-  border-right: 4px solid black;
-}
- */
 .atom:hover .atom__proton,
 .atom:hover .atom__electron {
   background-color:rgba(176, 212, 214, 1);
@@ -68,7 +73,7 @@
 }
 
 .atom:hover .atom__electron {
-  margin-top: 0;
+  margin-top: 5%;
 }
 
 .atom:hover .atom__path {
@@ -76,18 +81,19 @@
   height: 60px;
   border: 1px solid black;
 }
+
 /* List modifiers  */
-.atom_list:hover {
-  border-right: none;
+.atom_list {
+  display: flex;
 }
 
-.contact-info-aside__list-item:hover atom__proton_list,
+.contact-info-aside__list-item:hover .atom__proton_list,
 .contact-info-aside__list-item:hover .atom__electron_list {
   background-color:rgba(176, 212, 214, 1);
 }
 
 .contact-info-aside__list-item:hover .atom__electron_list {
-  margin-top: 89%;
+  margin-top: 75%;
   height: 4px;
   width: 4px;
   border: 1px solid black;
@@ -105,10 +111,11 @@
 }
 
 .atom__proton_list {
-  width: 4px; 
-  height: 4px;
-  border: none;
+  width: 8px; 
+  height: 8px;
   background-color: #ebe6e3;
+  top: calc(50% - 5px);
+  left: calc(50% - 4.5px);
 }
 
 .atom__path_list {

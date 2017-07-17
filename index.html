@@ -20,17 +20,27 @@ Made By A Collection of
 
     <title>A Collection Of Atoms</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="./static/css/index.css" rel="stylesheet">
-    <link href="./static/css/contact-info-aside.css" rel="stylesheet">
-    <link href="./static/css/about-me-section.css" rel="stylesheet">
-    <link href="./static/css/animated-atom.css" rel="stylesheet">
+    <link href="./static/css/build/index.css" rel="stylesheet">
+    <link href="./static/css/build/contact-info-aside.css" rel="stylesheet">
+    <link href="./static/css/build/about-me-section.css" rel="stylesheet">
+    <link href="./static/css/build/animated-atom.css" rel="stylesheet">
+    <link href="./static/css/build/tooltip.css" rel="stylesheet">
   </head>
   <body>
     <header class='header'>
+      <div id='js-meaningless-circle' class='meaningless-circle'>
+        ?
+      </div>
+      <div id='js-meaningless-tool-tip' class='tool-tip tool-tip_meaningless draw'>
+        <p> This is a <a class='dotted-link' href='https://en.wikipedia.org/wiki/Meaning_(existential)'>meaningless</a> circle. </p>
+        <button class='meaningless-button'>
+          OK
+        </button>
+      </div>
     </header>
     <main id='main'>
      <aside class='contact-info-aside'>
-       <span class='contact-info-aside__header'></span>
+       <span class='contact-info-aside__header black-on-hover'></span>
        <ul class='contact-info-aside__list'>
          <li class='contact-info-aside__list-item' data-fa-icon-classes='fa fa-github'>
            <div class='contact-info-aside__list-icon'>
@@ -95,7 +105,7 @@ Made By A Collection of
            <a class='contact-info-aside__list-label' href='https://twitter.com/Atom_Hernandez' target="_blank">twitter</a>
           </li>
        </ul>
-       <a id='special-atom' class='atom' href='https://acollectionofatoms.github.io/atomic-bohr-model-examples/index.html'>
+       <a id='js-atom' class='atom' href='https://acollectionofatoms.github.io/atomic-bohr-model-examples/index.html' target="_blank">
            <div class='atom__path'>
              <div class='atom__electron'>
                &nbsp
@@ -106,29 +116,19 @@ Made By A Collection of
         </a>
      </aside>
      <section class='about-me-section'>
-       <h4 class='about-me-section__header'> ...And what is this? </h4>
-       <p class='about-me-section__text'> This collection of atoms is sentient.
-         It begins to speak... What does it say? 
-         <q>'Lo and behold, you've made it.</q>
-       </p>
-       <p class='about-me-section__text'> and you wonder for a bit: 
-         <q>
-           Where is it that I've <i>made</i>? 
-         </q>
-       </p>
-       <p class='about-me-section__text'>
-         <q>
-           Does this collection of atoms go by a name?
-         </q>
-       </p>
-       <p class='about-me-section__text'> Adam Hernandez.
-       </p>
+      <header class='about-me-section__header'>
+        Hello Traveller
+      </header>
+      <p class='about-me-section__text'> This is a <a class='dotted-link' href='https://en.wikipedia.org/wiki/Website'> website</a>
+       created by <span class='subdued-text'> David</span> <a class='dotted-link' href='https://en.wikipedia.org/wiki/Adam_(given_name)'> Adam</a> Hernandez. </p>
+      <p class='about-me-section__text'> He is a <a href='https://en.wikipedia.org/wiki/Software_engineer' class='dotted-link'>software engineer</a> 
+        living in <a href='https://en.wikipedia.org/wiki/New_York_City'class='dotted-link'> New York City.</a></p>
      </section>
     </main>
     <footer class='footer'>
       <p>© 2017 All rights presumed to be reserved?</p>
       <p>Made by ACollectionOfAtoms™ with <span class='red-text'>❤</span> in NYC </p>
-    </footer>
+    </footer> 
   </body>
   <script src="./static/js/index.js"></script>
 </html>

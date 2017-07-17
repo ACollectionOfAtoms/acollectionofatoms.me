@@ -1,0 +1,23 @@
+.about-me-section {
+  -webkit-box-flex: 5;
+      -ms-flex: 5 0 0px;
+          flex: 5 0 0;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding: 0 1em;
+  margin: 0 5%;
+}
+
+.about-me-section__header {
+  font-size: 4em;
+  text-align: center;
+}
+
+.about-me-section__text {
+  font-size: 3.5em;
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2Fib3V0LW1lLXNlY3Rpb24uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usb0JBQVk7TUFBWixrQkFBWTtVQUFaLFlBQVk7RUFDWiw2QkFBUztNQUFULGtCQUFTO1VBQVQsU0FBUztFQUNULGVBQWU7RUFDZixhQUFhO0NBQ2Q7O0FBRUQ7RUFDRSxlQUFlO0VBQ2YsbUJBQW1CO0NBQ3BCOztBQUVEO0VBQ0UsaUJBQWlCO0VBQ2pCLGlCQUFpQjtFQUNqQixpQkFBaUI7Q0FDbEIiLCJmaWxlIjoiYWJvdXQtbWUtc2VjdGlvbi5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYWJvdXQtbWUtc2VjdGlvbiB7XG4gIGZsZXg6IDUgMCAwO1xuICBvcmRlcjogMTtcbiAgcGFkZGluZzogMCAxZW07XG4gIG1hcmdpbjogMCA1JTtcbn1cblxuLmFib3V0LW1lLXNlY3Rpb25fX2hlYWRlciB7XG4gIGZvbnQtc2l6ZTogNGVtO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5hYm91dC1tZS1zZWN0aW9uX190ZXh0IHtcbiAgZm9udC1zaXplOiAzLjVlbTtcbiAgbGluZS1oZWlnaHQ6IDEuNTtcbiAgZm9udC13ZWlnaHQ6IDEwMDtcbn1cbiJdfQ== */

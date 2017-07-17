@@ -34,15 +34,16 @@ body {
 }
 
 .header {
-  text-align: center;
+  text-align: right;
+  word-spacing: 0.5em;
   font-size: 3em;
-  padding: 1em 0;
+  padding-bottom: 1em;
   cursor: default;
   color: #ebe6e3;
 }
 
 #main {
-  flex: 1 0 0;
+  flex: 1 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -65,10 +66,67 @@ body {
   color: red !important; /* lmao */
 }
 
-/* .black-on-hover {
+.black-on-hover {
   transition: 0.2s color linear;
 }
- */
+ 
 .black-on-hover:hover {
   color: black;
+}
+
+.ghost-text {
+  transition: 0.2s color linear;
+  color: white;
+}
+
+.ghost-text:hover {
+  color: black;
+  cursor: help;
+}
+
+.meaningless-circle {
+  opacity: 0;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6;
+  color: rgba(176, 212, 214, 1);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+  display: block;
+  background-color: rgba(176, 212, 214, 1);
+  border: 1px solid black;
+  transition: opacity 1s linear;
+}
+
+.meaningless-circle_visble {
+  opacity: 1;
+}
+
+.meaningless-circle_active, .meaningless-circle:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+@keyframes blinking-border {
+  to { 
+    border-bottom: 2px dotted black;
+  }
+}
+
+.dotted-link {
+  border-bottom: 2px solid rgba(176, 212, 214, 1);
+}
+
+.dotted-link:hover {
+  animation: blinking-border 0.3s infinite linear; 
+}
+
+.subdued-text {
+  color: #ebe6e3;
 }

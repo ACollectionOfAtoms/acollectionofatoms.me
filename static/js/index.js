@@ -1,6 +1,24 @@
 var listHeaderBaseClassName = 'contact-info-aside__header';
 var mainHeaderBaseClassName = 'header';
 
+var meaninglessCircleEffect = function() {
+  var circle = document.getElementById('js-meaningless-circle');
+  var tooltip = document.getElementById('js-meaningless-tool-tip');
+  var button = document.getElementsByClassName('meaningless-button')[0];
+  function toggleToolTip() {
+    circle.classList.toggle('meaningless-circle_active');
+    tooltip.classList.toggle('meaningless-tool-tip_active');
+    button.classList.toggle('meaningless-button_active');
+  };
+  circle.addEventListener("click", function() {
+    toggleToolTip();
+  });
+  button.addEventListener("click", function() {
+    toggleToolTip();
+  })
+}
+
+meaninglessCircleEffect();
 var animateHeader = function (wordArray) {
   var headerLabelArray = ['a ', 'collection ', 'of ', 'atoms'];
   var mainHeaderEl = document.getElementsByClassName(mainHeaderBaseClassName)[0];
@@ -9,6 +27,13 @@ var animateHeader = function (wordArray) {
     wordSpan.className = 'black-on-hover';
     wordSpan.innerHTML = word;
     mainHeaderEl.appendChild(wordSpan);
+  });
+  var moreWords = [' made ', 'this ', 'for ', 'you.'];
+  moreWords.forEach(function(word) {
+    var span = document.createElement('span');
+    span.className = 'ghost-text';
+    span.innerHTML = word;
+    mainHeaderEl.appendChild(span);
   });
 };
 
@@ -45,7 +70,7 @@ var attachListItemListeners = function () {
 };
 
 var attachAtomIconListener = function () {
-  var atom = document.getElementById('special-atom');
+  var atom = document.getElementById('js-atom');
   var listHeader = document.getElementsByClassName(listHeaderBaseClassName)[0];
   atom.addEventListener("mouseenter", function() {
     listHeader.classList.toggle('black-text');
@@ -66,8 +91,15 @@ var sayHi = function(time) {
     });
   }, time);
 }
+var showMeaninglessCircle = function(time) {
+  var circle = document.getElementsByClassName('meaningless-circle')[0];
+  setTimeout(function() {
+    circle.classList.toggle('meaningless-circle_visble');
+  }, time);
+}
 
 sayHi(2000);
+showMeaninglessCircle(2000);
 resetListHeader();
 attachAtomIconListener();
 attachListItemListeners();

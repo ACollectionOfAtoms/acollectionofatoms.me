@@ -2,9 +2,7 @@
   flex: 5 0 0;
   order: 1;
   padding: 0 1em;
-  margin: 0 10%;
-  max-height: 80%;
-  overflow-y: scroll;
+  margin: 0 5%;
 }
 
 .about-me-section__header {
@@ -14,4 +12,6 @@
 
 .about-me-section__text {
   font-size: 3.5em;
+  line-height: 1.5;
+  font-weight: 100;
 }
