@@ -38,21 +38,24 @@
 
 .atom__proton {
   position: absolute;
-  top: calc(50% - 16px);
-  left: calc(50% - 16px);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
   display: block;
   width: 30px; 
   height: 30px;
   border-radius: 50%;
-  border: 1px solid #ebe6e3;
-  background: #ebe6e3;
+  border: 1px solid black;
+  background: black;
 }
 
 .atom__path {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  border: 1px solid #ebe6e3;
+  border: 1px solid black;
   background: transparent;
   transition: 0.2s linear all;
 }
@@ -60,10 +63,10 @@
 .atom__electron {
   height: 12px;
   width: 12px;
-  margin-top: 12%;
+  margin-top: 18px;
   border-radius: 50%;
-  background-color: #ebe6e3;
-  border: 1px solid #ebe6e3;
+  background-color: black;
+  border: 1px solid black;
 }
 
 .atom:hover .atom__proton,
@@ -73,7 +76,7 @@
 }
 
 .atom:hover .atom__electron {
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 .atom:hover .atom__path {
@@ -84,9 +87,9 @@
 
 /* List modifiers  */
 .atom_list {
-  height: 100%;
-  width: 100%;
-  align-self: center;
+  align-self: flex-end;
+  width: 1em;
+  height: 1em;
 }
 
 .contact-info-aside__list-item:hover .atom__proton_list,
@@ -102,8 +105,8 @@
 }
 
 .contact-info-aside__list-item:hover .atom__path_list {
-  width: 20px;
-  height: 20px;
+  width: 80%;
+  height: 80%;
   border: 1px solid black;
 }
 
@@ -113,11 +116,9 @@
 }
 
 .atom__proton_list {
-  width: 8px; 
-  height: 8px;
-  background-color: #ebe6e3;
-  top: calc(50% - 5px);
-  left: calc(50% - 5px);
+  width: 0.3em; 
+  height: 0.3em;
+  background-color: black;
 }
 
 .atom__path_list {

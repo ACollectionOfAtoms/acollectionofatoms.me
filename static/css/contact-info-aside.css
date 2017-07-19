@@ -4,13 +4,13 @@
   height: 50em;
   flex: 2 0 0;
   flex-flow: column;
-  border-right: 1px solid #ebe6e3;
+  border-right: 1px solid black;
 }
 
 .contact-info-aside__header {
   text-align: right;
   flex: 1;
-  font-size: 2.5em;
+  font-size: 4em;
   border-right: 3px solid transparent;
   color: #ebe6e3;
 }
@@ -30,10 +30,12 @@
 }
 
 .contact-info-aside__list-icon {
-  display: inline-block;
+  flex-direction: column;
+  display: flex;
   flex: 1 0 0;
   height: 1em;
   width: 1em;
+  padding-right: 1em;
 }
 
 .contact-info-aside__list-label {
@@ -48,14 +50,13 @@
 
 .contact-info-aside__list-item {
   display: flex;
-  color: #ebe6e3;
-  border-right: 4px solid transparent;
+  color: black;
+  border-right: 0.2em solid transparent;
   padding: 1em 0;
 }
 
 .contact-info-aside__list-item:hover {
-  color: black;
-  border-right: 4px solid black;
+  border-right: 0.2em solid rgba(176, 212, 214, 1);
   cursor: pointer;
 }
 

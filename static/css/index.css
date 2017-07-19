@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-size: 12px;
+  font-size: 16px;
   margin: 0;
   display: flex;
   flex-flow: column nowrap;
@@ -28,9 +28,11 @@ body {
 
 #main, .header, .footer {
   width: 90%;
-  background:rgba(255, 255, 255, 0.9); 
+  max-width: 1600px;
+  background:rgba(255, 255, 255, 0.95); 
   border-left: 1px solid black;
   border-right: 1px solid black;
+  font-weight: 100;
 }
 
 .header {
@@ -40,7 +42,8 @@ body {
   padding-top: 0.5em;
   padding-bottom: 1em;
   cursor: default;
-  color: #ebe6e3;
+  color: black;
+  position: relative;
 }
 
 #main {
@@ -86,20 +89,21 @@ body {
 }
 
 .meaningless-circle {
-  opacity: 0;
-  font-size: 10px;
+  opacity: 1;
   font-weight: bold;
   text-align: center;
-  line-height: 1.6;
-  color: rgba(176, 212, 214, 1);
-  width: 16px;
-  height: 16px;
+  font-size: 0.5em;
+  width: 1em;
+  height: 1em;
   border-radius: 50%;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top:  1.85em;
+  margin-left: 0.25em;
   position: absolute;
   display: block;
-  background-color: rgba(176, 212, 214, 1);
+  top: 0;
+  right: 0.5em;
+  color: black;
+  background-color: currentColor;
   border: 1px solid black;
   transition: opacity 1s linear;
 }
@@ -116,12 +120,12 @@ body {
 
 @keyframes blinking-border {
   to { 
-    border-bottom: 2px dotted black;
+    border-bottom: 0.1em dotted black;
   }
 }
 
 .dotted-link {
-  border-bottom: 2px solid rgba(176, 212, 214, 1);
+  border-bottom: 0.1em solid rgba(176, 212, 214, 1);
 }
 
 .dotted-link:hover {

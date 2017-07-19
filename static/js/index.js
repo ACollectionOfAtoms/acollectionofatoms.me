@@ -10,12 +10,11 @@ var meaninglessCircleEffect = function() {
     tooltip.classList.toggle('meaningless-tool-tip_active');
     button.classList.toggle('meaningless-button_active');
   };
-  circle.addEventListener("click", function() {
-    toggleToolTip();
+  window.addEventListener("click", function(e) {
+    if (e.target !== circle || e.target !== tooltip) {
+      toggleToolTip();
+    }
   });
-  button.addEventListener("click", function() {
-    toggleToolTip();
-  })
 }
 
 meaninglessCircleEffect();

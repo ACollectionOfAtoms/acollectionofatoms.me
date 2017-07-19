@@ -1,7 +1,8 @@
 .tool-tip_meaningless {
   position: absolute;
-  margin-top: 25px;
-  margin-left: 25px;
+  right: 0;
+  margin-top: 1.4em;
+  margin-right: 1.2em;
 }
  
 .tool-tip {
@@ -11,7 +12,7 @@
   color: white;
   padding: 1em 0.5em;
   text-align: center;
-  font-size: 16px;
+  font-size: 0.7em;
   overflow: hidden;
   flex-flow: column nowrap;
   justify-content: center;
