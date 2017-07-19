@@ -83,7 +83,7 @@
 
 .meaningless-tool-tip_active::before, .meaningless-tool-tip_active::after {
   width: 99%;
-  height: 99%;
+  height: 100%;
 }
 
 .meaningless-tool-tip_active::before {

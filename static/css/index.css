@@ -54,12 +54,8 @@ body {
 }
 
 .footer {
-  font-size: 0.8em;
+  font-size: 1em;
   text-align: center;
-}
-
-.hi-letter {
-  transition: 2s linear color;
 }
 
 .black-text {

@@ -1,0 +1,33 @@
+@media (max-width: 736px) {
+  body {
+    font-size: 12px;
+  }
+  #main {
+    display: block;
+  }
+  .meaningless-circle {
+    display: none;
+  }
+  .ghost-text {
+    display: none;
+  }
+  .atom {
+    margin: 15% 0;
+  }
+  .contact-info-aside {
+    height: 80%;
+  }
+  .contact-info-aside__header {
+    text-align: center;
+    border-bottom: 0.01em solid black;
+    flex: 0;
+  }
+  .contact-info-aside__list {
+    text-align: center;
+    font-size: 3em;
+  }
+  .contact-info-aside__list-icon {
+    display: none;
+    flex: 0;
+  }
+}
