@@ -10,9 +10,16 @@ var meaninglessCircleEffect = function() {
     tooltip.classList.toggle('meaningless-tool-tip_active');
     button.classList.toggle('meaningless-button_active');
   };
+  function closeToolTip() {
+    circle.classList.remove('meaningless-circle_active');
+    tooltip.classList.remove('meaningless-tool-tip_active');
+    button.classList.remove('meaningless-button_active');
+  }
   window.addEventListener("click", function(e) {
-    if (e.target !== circle || e.target !== tooltip) {
+    if (e.target === circle) {
       toggleToolTip();
+    } else if (e.target !== circle || e.target !== tooltip) {
+      closeToolTip();
     }
   });
 }

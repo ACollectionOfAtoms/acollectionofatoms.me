@@ -11,7 +11,7 @@
   text-align: right;
   flex: 1;
   font-size: 4em;
-  border-right: 3px solid transparent;
+  border-right: 0.2em solid transparent;
   color: #ebe6e3;
 }
 
