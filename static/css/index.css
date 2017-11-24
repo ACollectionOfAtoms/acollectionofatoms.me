@@ -9,12 +9,7 @@ html {
   background-image: radial-gradient(rgba(176, 212, 214, 1) 30%, transparent 0);
   background-size: 30px 30px;
   background-position: 0 0, 15px 15px;
-  animation: circle-movement 1s infinite linear; 
   box-sizing: border-box;
-}
-
-@keyframes circle-movement {
-  to { background-position: 30px 30px, 15px 15px }
 }
 
 body {
@@ -114,18 +109,12 @@ body {
   background-color: black;
 }
 
-@keyframes blinking-border {
-  to { 
-    border-bottom: 0.1em dotted black;
-  }
-}
-
 .dotted-link {
   border-bottom: 0.1em solid rgba(176, 212, 214, 1);
 }
 
 .dotted-link:hover {
-  animation: blinking-border 0.3s infinite linear; 
+  border-bottom: 0.1em dotted black;
 }
 
 .subdued-text {
