@@ -1,12 +1,14 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import atom from '../images/atom.gif';
 
 const Header = ({ siteTitle }) => (
   <div
     style={{
-      background: `rebeccapurple`,
+      background: `#000`,
       marginBottom: `1.45rem`,
+      borderBottom: `1px solid black`,
     }}
   >
     <div
@@ -20,11 +22,13 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `#fff`,
             textDecoration: `none`,
           }}
         >
+        <img src={atom} />
           {siteTitle}
+        <img src={atom} />
         </Link>
       </h1>
     </div>
