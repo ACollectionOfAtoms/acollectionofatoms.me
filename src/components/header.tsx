@@ -9,6 +9,7 @@ const Header = ({ siteTitle }) => (
       background: `#000`,
       marginBottom: `1.45rem`,
       borderBottom: `1px solid black`,
+      textAlign: `center`
     }}
   >
     <div
