@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h2 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         <img src={atom} />
         </Link>
-      </h1>
+      </h2>
     </div>
   </div>
 )

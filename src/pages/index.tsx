@@ -14,9 +14,9 @@ import './index.css';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h2 className='centerText'>Hello </h2>
+    <h3 className='centerText'>Hello </h3>
     <img className='centeredImage' src={internet} />
-    <h2 className='centerText'>Traveller</h2>
+    <h3 className='centerText'>Traveller</h3>
     <img className='centeredImage' src={startrek} />
     <p> This is a <a href='https://en.wikipedia.org/wiki/Website'>website</a> created by <span> David</span> <a href='https://en.wikipedia.org/wiki/Adam_(given_name)'> Adam</a> Hernandez (No one calls him <span> David</span>). </p>
     <img className='centeredImage' src={trumpetskull} />
