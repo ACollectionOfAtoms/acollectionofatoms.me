@@ -11,7 +11,8 @@ const Header = ({ siteTitle }) => (
       padding: `1.45rem 1.0875rem`,
       display: `flex`,
       flexDirection: `column`,
-      alignItems: `center`
+      alignItems: `center`,
+      textAlign: `center`
     }}
   >
       <img style={{width: '40px', paddingTop: '20px'}} src={atom} />
