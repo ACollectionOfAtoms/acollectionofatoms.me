@@ -14,9 +14,9 @@ import './index.css';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h3 className='centerText'>Hello </h3>
+    <h2 className='centerText'>Hello </h2>
     <img className='centeredImage' src={internet} />
-    <h3 className='centerText'>Traveller</h3>
+    <h2 className='centerText'>Traveller</h2>
     <img className='centeredImage' src={startrek} />
     <p> This is a <a href='https://en.wikipedia.org/wiki/Website'>website</a> created by <span> David</span> <a href='https://en.wikipedia.org/wiki/Adam_(given_name)'> Adam</a> Hernandez (No one calls him <span> David</span>). </p>
     <img className='centeredImage' src={trumpetskull} />
@@ -25,8 +25,10 @@ const IndexPage = () => (
     <p> Nowadays he is only using the computation side of his degree as a <a href='https://en.wikipedia.org/wiki/Software_engineer'>software engineer</a> living in <a href='https://en.wikipedia.org/wiki/New_York_City'> New York City</a> (Such a lovely place!).</p>
     <img className='centeredImage' src={exer} />
     <p>If you'd like to talk shop, feel free to <a href="mailto:davidatomhernandez@gmail.com">contact</a> him.</p>
-    <img className='centeredImage' src={dancer1} />
-    <img className='centeredImage' src={dancer2} />
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+      <img className='centeredImage' src={dancer1} />
+      <img className='centeredImage' src={dancer2} />
+    </div>
   </Layout>
 )
 

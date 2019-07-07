@@ -6,33 +6,29 @@ import atom from '../images/atom.gif';
 const Header = ({ siteTitle }) => (
   <div
     style={{
-      background: `#000`,
-      marginBottom: `1.45rem`,
-      borderBottom: `1px solid black`,
-      textAlign: `center`
+      margin: `0 auto`,
+      maxWidth: 960,
+      padding: `1.45rem 1.0875rem`,
+      display: `flex`,
+      flexDirection: `column`,
+      alignItems: `center`
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h2 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `#fff`,
-            textDecoration: `none`,
-          }}
-        >
-        <img src={atom} />
-          {siteTitle}
-        <img src={atom} />
-        </Link>
-      </h2>
-    </div>
+      <img style={{width: '40px', paddingTop: '20px'}} src={atom} />
+    <h1 style={{ margin: 0 }}>
+      <Link
+        to="/"
+        style={{
+          color: `#fff`,
+          textDecoration: `none`,
+
+        }}
+      >
+      <span>
+        {siteTitle}
+      </span>
+      </Link>
+    </h1>
   </div>
 )
 
