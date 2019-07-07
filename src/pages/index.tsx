@@ -13,7 +13,7 @@ import './index.css';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`david adam hernandez`, `acollectionofatoms`, `developer nyc`]} />
     <h2 className='centerText'>Hello </h2>
     <img className='centeredImage' src={internet} />
     <h2 className='centerText'>Traveller</h2>
