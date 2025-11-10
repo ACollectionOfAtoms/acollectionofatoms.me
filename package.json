@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "netlify deploy --prod"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.14.5",
