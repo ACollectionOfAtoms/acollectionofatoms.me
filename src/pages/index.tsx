@@ -16,8 +16,8 @@ export default function Home() {
     <div>
       <main>
         <h1>A Collection of Atoms</h1>
-        <h2>A website</h2>
-        <p>This is a website for and by collections of atoms</p>
+        <h2>A website by such</h2>
+        <h2>For such.</h2>
       </main>
     </div>
   );
