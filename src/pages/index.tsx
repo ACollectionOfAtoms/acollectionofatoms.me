@@ -17,7 +17,7 @@ export default function Home() {
       <main>
         <h1>A Collection of Atoms</h1>
         <h2>A website by such</h2>
-        <h2>For such.</h2>
+        <h2>For such</h2>
       </main>
     </div>
   );
