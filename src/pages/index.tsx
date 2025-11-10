@@ -16,7 +16,7 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`david adam hernandez`, `acollectionofatoms`, `developer nyc`]} />
     <h2 className='centerText'>Hello </h2>
     <img className='centeredImage' src={internet} />
-    <h2 className='centerText'>Traveller</h2>
+    <h2 className='centerText'>Traveller!</h2>
     <img className='centeredImage' src={startrek} />
     <p> This is a <a href='https://en.wikipedia.org/wiki/Website'>website</a> created by <span> David</span> <a href='https://en.wikipedia.org/wiki/Adam_(given_name)'> Adam</a> Hernandez (No one calls him <span> David</span>). </p>
     <img className='centeredImage' src={trumpetskull} />
