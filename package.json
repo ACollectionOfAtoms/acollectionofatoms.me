@@ -1,45 +1,26 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "Personal website",
+  "name": "acollectionofatoms.me",
   "version": "0.1.0",
-  "author": "Adam",
-  "dependencies": {
-    "gatsby": "^2.13.6",
-    "gatsby-cli": "^2.7.8",
-    "gatsby-image": "^2.2.4",
-    "gatsby-plugin-manifest": "^2.2.1",
-    "gatsby-plugin-offline": "^2.2.1",
-    "gatsby-plugin-react-helmet": "^3.1.0",
-    "gatsby-plugin-sharp": "^2.2.3",
-    "gatsby-plugin-typescript": "^2.1.0",
-    "gatsby-source-filesystem": "^2.1.2",
-    "gatsby-transformer-sharp": "^2.2.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
+  "private": true,
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "^16.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
-    "typescript": "^3.5.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
